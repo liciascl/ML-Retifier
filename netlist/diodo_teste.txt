@@ -1,0 +1,10740 @@
+*
+******************************************
+*
+*1N4148
+*
+*NXP Semiconductors
+*
+*High-speed diodes
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 450 mA 
+*trr  = 4ns
+*
+*Package: SOD 27
+*
+*Package Pin 1 : Cathode
+*Package Pin 2 : Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT 1N4148 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 5.827E+9 
+D1 1 2 1N4148
+*
+.MODEL 1N4148 D 
++ IS = 4.352E-9 
++ N = 1.906 
++ BV = 110 
++ IBV = 0.0001 
++ RS = 0.6458 
++ CJO = 7.048E-13 
++ VJ = 0.869 
++ M = 0.03 
++ FC = 0.5 
++ TT = 3.48E-9 
+.ENDS
+**
+******************************************
+*
+*1N4735A
+*
+*NXP Semiconductors
+*
+*Voltage regulator diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 10?A  @ VR = 3V
+*IZSM  = 730mA @ tp = 
+*VZmax = 6,2V  @ IZ = 1mA
+*
+*
+*
+*
+* 
+*
+*Package: SOD66
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT 1N4735A 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3E+9 
+D1 1 2 1N4735A
+*
+.MODEL 1N4735A D 
++ IS = 1.803E-14 
++ N = 1.167 
++ BV = 6.2 
++ IBV = 0.041 
++ RS = 0.3264 
++ CJO = 6.85E-11 
++ VJ = 0.6947 
++ M = 0.3439 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*1PS10SB82
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM =     @ tp = 
+*VF = 700mV @ IF = 30mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD882
+*
+*Package Pin 1 : Cathode 
+*Package Pin 2 : Anode
+* 
+* 
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT 1PS10SB82 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3E+7 
+D1 1 2 1PS10SB82
+*
+.MODEL 1PS10SB82 D 
++ IS = 1.042E-8 
++ N = 1.029 
++ BV = 17 
++ IBV = 0.001 
++ RS = 5.567 
++ CJO = 9.779E-13 
++ VJ = 0.2925 
++ M = 0.194 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*1PS181 
+*
+*NXP Semiconductors
+*
+*High speed double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT 346
+*
+*Package Pin 1: cathode      K1
+*Package Pin 2: cathode      K2
+*Package Pin 3: common anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT 1PS181 1 2
+*
+* The resistor R1 does not reflect
+* a physical device.  Instead it 
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 1PS181
+*
+.MODEL 1PS181 D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
++ EG = 1.1
++ XTI = 3
+.ENDS
+**
+******************************************
+*
+*1PS300 
+*
+*NXP Semiconductors
+*
+*High speed double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT 323
+*
+*Package Pin 1: cathode      K1
+*Package Pin 2: cathode      K2
+*Package Pin 3: common anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT 1PS300 1 2
+*
+* The resistor R1 does not reflect
+* physical devices.  Instead it 
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 1PS300
+*
+.MODEL 1PS300 D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
++ EG = 1.1
++ XTI = 3
+.ENDS
+**
+******************************************
+*
+*1PS79SB30
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 1A    @ tp = 8,3ms
+*VF   = 600mV @ IF = 200mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD523
+*
+*Package Pin 1 : Cathode 
+*Package Pin 2 : Anode
+* 
+* 
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT 1PS79SB30 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 9.5E+07
+D1 1 2 1PS79SB30
+*
+.MODEL 1PS79SB30 D
++ IS = 8E-08
++ N = 1.012
++ BV = 45
++ IBV = 0.0001
++ RS = 0.8243
++ CJO = 2.515E-11
++ VJ = 0.4182
++ M = 0.4941
++ FC = 0.5
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*1PS79SB31
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 1A    @ tp = 8,3ms
+*VF   = 500mV @ IF = 200mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD523
+*
+*Package Pin 1 : Cathode 
+*Package Pin 2 : Anode
+* 
+* 
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT 1PS79SB31 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 4.771E+06
+D1 1 2 1PS79SB31
+*
+.MODEL 1PS79SB31 D
++ IS = 9.539E-07
++ N = 1.007
++ BV = 35
++ IBV = 4E-05
++ RS = 0.4678
++ CJO = 3.518E-11
++ VJ = 0.3193
++ M = 0.4687
++ FC = 0.5
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*1PS88SB82
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM =       @ tp =   
+*VF   = 700mV @ IF = 30mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode;Cathode D1;D3
+*Package Pin 2:5: Anode;Cathode D2;D2
+*Package Pin 3;6: Anode;Cathode D3;D1
+* 
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT 1PS88SB82 1 2
+*
+* The resistor R1 does not reflect 
+* a physical devices. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3E+07
+D1 1 2 1PS88SB82
+*
+.MODEL 1PS88SB82 D
++ IS = 1.042E-08
++ N = 1.029
++ BV = 20
++ IBV = 0.001
++ RS = 5.567
++ CJO = 1.029E-12
++ VJ = 0.2159
++ M = 0.1731
++ FC = 0
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS101 
+*
+*NXP Semiconductors
+*
+*High-voltage switching diodes
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 1A   @ tp = 1ms
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode     
+*Package Pin 2: not connected  
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS101 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.2E+10
+D1 1 2 BAS101
+*
+.MODEL BAS101 D
++ IS = 7.219E-9
++ N = 2
++ BV = 330
++ IBV = 0.0001
++ RS = 0.63
++ CJO = 4.584E-13
++ VJ = 0.7483
++ M = 0.06257
++ FC = 0.5
++ TT = 2.1987E-8
+.ENDS
+**
+******************************************
+*
+*BAS101S 
+*
+*NXP Semiconductors
+*
+*High-voltage switching diodes
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 1A   @ tp = 1ms
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode         D1
+*Package Pin 2: Cathode       D2
+*Package Pin 3: Cathode;Anode D1;D2
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS101S 1 2 
+*
+* The resistor R1 does not reflect
+* a physical device.  Instead it 
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 1.2E+10
+D1 1 2 BAS101S
+*
+.MODEL BAS101S D
++ IS = 7.219E-9
++ N = 2
++ BV = 330
++ IBV = 0.0001
++ RS = 0.63
++ CJO = 4.584E-13
++ VJ = 0.7483
++ M = 0.06257
++ FC = 0.5
++ TT = 2.1987E-8
+.ENDS
+**
+******************************************
+*
+*BAS116H
+*
+*NXP Semiconductors
+*
+*Low leakage diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 1ms
+*trr  = 0,3?s
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode     
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BAS116H D
++ IS=805.84E-18
++ N=1.0246
++ RS=50.000E-3
++ IKF=362.16E-6
++ CJO=1.9002E-12
++ M=.35193
++ VJ=1.2722
++ ISR=298.95E-15
++ BV=98
++ IBV=1.42E-3
++ TT=1.0230E-6
+.ENDS
+**
+******************************************
+*
+*BAS116
+*
+*NXP Semiconductors
+*
+*Low leakage diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 1ms
+*trr  = 3?s
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode     
+*Package Pin 2: not connected  
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS116 D
++ IS=805.84E-18
++ N=1.0246
++ RS=50.000E-3
++ IKF=362.16E-6
++ CJO=1.9002E-12
++ M=.35193
++ VJ=1.2722
++ ISR=298.95E-15
++ BV=113.30
++ IBV=10
++ TT=1.0230E-6
+.ENDS
+**
+******************************************
+*
+*BAS116T
+*
+*NXP Semiconductors
+*
+*Single low leakage current switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp =  
+*trr  = 3?s
+*
+*Package: SOT416
+*
+*Package Pin 1: Anode   
+*Package Pin 2: not connected
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.MODEL BAS116T D 
++ IS = 1.472E-015 
++ N = 1.05 
++ BV = 110
++ IBV = 0.0001 
++ RS = 0.4571 
++ CJO = 1.821E-012 
++ VJ = 0.5358 
++ M = 0.3461 
++ FC = 0.5 
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS16H
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4?s
+*
+*Package: SOT416
+*
+*Package Pin 1: Cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BAS16H D
++ IS=6.0289E-9
++ N=2.1283
++ RS=1.0000E-3
++ IKF=37.638E-3
++ CJO=593.63E-15
++ M=.1
++ VJ=.68774
++ ISR=2.0646e-9
++ NR=4.9950
++ BV=113.60
++ IBV=10
++ TT=4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS16J
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4?s
+*
+*Package: SOD323F
+*
+*Package Pin 1: Cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BAS16J D
++ IS=6.0289E-9
++ N=2.1283
++ RS=1.0000E-3
++ IKF=37.638E-3
++ CJO=593.63E-15
++ M=.1
++ VJ=.68774
++ ISR=2.0646e-9
++ NR=4.9950
++ BV=113.60
++ IBV=1E-3
++ TT=4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS16L
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4?s
+*
+*Package: SOD882
+*
+*Package Pin 1: Cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS16L D
++ IS = 6.0289E-9
++ N = 2.1283
++ RS = 1.0000E-3
++ IKF = 37.638E-3
++ CJO = 5.641E-013
++ M = 0.05188 
++ VJ = 0.01571
++ ISR = 2.0646e-9
++ NR = 4.9950
++ BV = 113.60
++ IBV = 10
++ TT = 4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS16
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4?s
+*
+*Package: SOT416
+*
+*Package Pin 1: Anode   
+*Package Pin 2: not connected
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAS16 1 2
+*
+*The resistor R1 and the diode D2 do not  reflect  
+*physical devices but improve only modeling in the reverse 
+*mode of operation.
+*       
+R1 1 2 5E+009   
+D1 1 2 DIODE1 
+D2 1 2 DIODE2 
+*
+ .MODEL DIODE1 D 
+ + IS = 3.9E-009 
+ + N = 1.9       
+ + BV = 129.6    
+ + IBV = 2.906E-007      
+ + RS = 1.1      
+ + CJO = 4.29E-013       
+ + VJ = 0.68     
+ + M = 0.026     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-015   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS
+**
+******************************************
+*
+*BAS16VV
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4ns
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode;Cathode  D1;D3
+*Package Pin 2;5: Anode;Cathode  D2;D2
+*Package Pin 3;6: Anode;Cathode  D3;D1
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS16VV D
++ IS=6.0289E-9
++ N=2.1283
++ RS=1.0000E-3
++ IKF=37.638E-3
++ CJO=593.63E-15
++ M=.1
++ VJ=.68774
++ ISR=2.0646e-9
++ NR=4.9950
++ BV=113.60
++ IBV=10
++ TT=4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS16VY
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4ns
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode;Cathode  D1;D3
+*Package Pin 2;5: Anode;Cathode  D2;D2
+*Package Pin 3;6: Anode;Cathode  D3;D1
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAS16VY 1 2
+  R1 1 2 5E+009   
+ D1 1 2  
+ + DIODE1
+ D2 1 2  
+ + DIODE2
+
+*The resistor R1 and the diode 
+*D2 do not reflect physical 
+*devices but improve only 
+*modeling in the reverse mode 
+*of operation.
+*
+
+ .MODEL DIODE1 D 
+ + IS = 3.9E-009 
+ + N = 1.9       
+ + BV = 125.9    
+ + IBV = 1.738E-008      
+ + RS = 1.1      
+ + CJO = 4.42E-013       
+ + VJ = 0.124    
+ + M = 0.024     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-015   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS*
+******************************************
+*
+*BAS216
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp =  
+*trr  = 4ns
+*
+*Package: SOD110
+*
+*Package Pin 1: Cathode
+*Package Pin 2: Anode
+* 
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS216 D
++ IS=6.0289E-9
++ N=2.1283
++ RS=1.0000E-3
++ IKF=37.638E-3
++ CJO=593.63E-15
++ M=.1
++ VJ=.68774
++ ISR=2.0646E-9
++ NR=4.9950
++ BV=113.60
++ IBV=10
++ TT=4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS21H
+*
+*NXP Semiconductors
+*
+*Single high voltage switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 1ms
+*trr  = 50ns
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode
+*Package Pin 2: Anode
+* 
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS21H 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAS21H 
+*
+.MODEL BAS21H D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 6.99E-13 
++ VJ = 0.2028 
++ M = 0.1151 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAS21J
+*
+*NXP Semiconductors
+*
+*Single high-speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 1A   @ tp = 0,5ms
+*trr  = 50ns
+*
+*Package: SOD323F
+*
+*Package Pin 1: Cathode
+*Package Pin 2: Anode
+* 
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS21J 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.2E+10 
+D1 1 2 BAS21J
+*
+.MODEL BAS21J D
++ IS = 7.219E-9
++ N = 2
++ BV = 330
++ IBV = 0.0001
++ RS = 0.63
++ CJO = 4.584E-13
++ VJ = 0.7483
++ M = 0.06257
++ FC = 0.5
++ TT = 2.1987E-8
+.ENDS
+**
+******************************************
+*
+*BAS21
+*
+*NXP Semiconductors
+*
+*General purpose diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp =  
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode
+*Package Pin 2: not connected
+*Package Pin 3: Cathode  
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS21 1 2 
+*
+*The resistor R1 does not reflect 
+*a physical device. Instead it
+*improves modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAS21 
+*
+.MODEL BAS21 D
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 6.99E-13 
++ VJ = 0.2028 
++ M = 0.1151 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAS21VD
+*
+*NXP Semiconductors
+*
+*High-voltage switching diode array
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 1A   @ tp = 1ms
+*trr  = 50ns
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Anode (k1;a3)
+*Package Pin 2;5: Cathode;Anode (k2;a2)
+*Package Pin 3;6: Cathode;Anode (k3;a1)
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAS21VD 1 2
+*
+* The resistor R1 does not reflect 
+* a physical devices.Instead it 
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.622E+10
+D1 1 2 BAS21VD
+*
+.MODEL BAS21VD D
++ IS = 3.648E-9
++ N = 1.909
++ BV = 260
++ IBV = 2E-7
++ RS = 0.7535
++ CJO = 5.01E-13
++ VJ = 0.4515
++ M = 0.0571
++ FC = 0.5
++ TT = 2.054E-8
+.ENDS
+**
+******************************************
+*
+*BAS28
+*
+*NXP Semiconductors
+*
+*High speed double diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 1ms
+*trr  = 4ns
+*
+*Package: SOT143B
+*
+*Package Pin 1: cathode  D1
+*Package Pin 2: cathode  D2
+*Package Pin 3: anode    D2
+*Package Pin 4: anode    D1
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS28 D
++ IS=6.0289E-9
++ N=2.1283
++ RS=1.0000E-3
++ IKF=37.638E-3
++ CJO=593.63E-15
++ M=.1
++ VJ=.68774
++ ISR=2.0646E-9
++ NR=4.9950
++ BV=113.60
++ IBV=10
++ TT=4.5000E-9
+.ENDS
+**
+******************************************
+*
+*BAS316
+*
+*NXP Semiconductors
+*
+*High-speed switching diodes
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp = 0,5?s
+*trr  = 4ns
+*
+*Package: SOD323
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS316 1 2   
+*
+* The Resistor R1 and the diode D2 
+*do not reflect physical devices. 
+*Instead they improve modeling in 
+*the reverse mode of operation.
+* 
+
+ R1 1 2 1E+010   
+ D1 1 2  
+ + DIODE1
+ D2 1 2  
+ + DIODE2
+ .MODEL DIODE1 D 
+ + IS = 3.9E-009 
+ + N = 1.9       
+ + BV = 141.3    
+ + IBV = 4.485E-005      
+ + RS = 1.1      
+ + CJO = 4.344E-013      
+ + VJ = 0.23     
+ + M = 0.026     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-015   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS   
+**
+******************************************
+*
+*BAS321
+*
+*NXP Semiconductors
+*
+*General purpose diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 0,5ms
+*trr  = 50ns
+*
+*Package: SOD323
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAS321 1 2
+*
+* The resistor R1 does not reflect
+* a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAS321
+*
+.MODEL BAS321 D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 6.99E-13 
++ VJ = 0.2028 
++ M = 0.1151 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAS32L
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 450mA
+*trr  = 4ns
+*
+*Package: SOD27
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode      
+* 
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS32L D
++ IS=22.270E-9
++ N=2.2030
++ RS=1.0000E-3
++ IKF=16.940E-3
++ CJO=1.0350E-12
++ M=.1
++ VJ=.75
++ ISR=10.010E-21
++ BV=124.10
++ IBV=7.6070E-3
++ TT=4.3280E-9
+.ENDS
+**
+******************************************
+*
+*BAS40-05V
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode           D1
+*Package Pin 2: Anode           D2
+*Package Pin 3: Cathode;Cathode D1;D2
+*
+* 
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40-05V 1 2 
+*
+* The resistor R1 does not 
+* reflect a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40-05V 
+*
+.MODEL BAS40-05V D 
++ IS = 9.114E-09 
++ N = 1.006 
++ BV = 45 
++ IBV = 7.8E-05 
++ RS = 4.563 
++ CJO = 3.895E-12 
++ VJ = 0.3192 
++ M = 0.4008 
++ FC = 0.5 
++ TT = 0 
++ EG = 0.69 
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS40-07
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT143B
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: Cathode D2
+*Package Pin 3: Anode   D2
+*Package Pin 4: Anode   D1
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40-07 1 2 
+*
+* The resistor R1 does not reflect a 
+* physical device.  Instead it improves
+* modeling in the reverse mode of
+* operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40-07
+*
+.MODEL BAS40-07 D
++ IS = 8.361E-09
++ N = 1.003
++ BV = 44
++ IBV = 8E-07
++ RS = 5.031
++ CJO = 3.8E-12
++ VJ = 0.1119
++ M = 0.2915
++ FC = 1
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS40-07V
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode;Anode     D1;D2
+*Package Pin 2;5: not connected
+*Package Pin 3;6: Cathode;Cathode D2;D1
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40-07V 1 2
+*
+* The resistor R1 does not reflect a
+* physical devices.  Instead it improves
+* modeling in the reverse mode of
+* operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40-07V
+*
+.MODEL BAS40-07V D
++ IS = 8.361E-09
++ N = 1.003
++ BV = 44
++ IBV = 8E-07
++ RS = 5.031
++ CJO = 3.8E-12
++ VJ = 0.1119
++ M = 0.2915
++ FC = 1
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS40H
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40H 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40H
+*
+.MODEL BAS40H D
++ IS = 8.361E-09
++ N = 1.003
++ BV = 44
++ IBV = 8E-07
++ RS = 5.031
++ CJO = 3.8E-12
++ VJ = 0.1119
++ M = 0.2915
++ FC = 1
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS40L
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD882
+*
+*Package Pin 1: Cathode
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40L 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40L
+*
+.MODEL BAS40L D 
++ IS = 9.114E-9 
++ N = 1.006 
++ BV = 45 
++ IBV = 7.8E-5 
++ RS = 4.563 
++ CJO = 3.895E-12 
++ VJ = 0.3192 
++ M = 0.4008 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAS40XY
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 200mA @ tp = 10ms
+*VF   = 380mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode ; Anode                   D1;D4
+*Package Pin 2;5: Cathode ; Cathode               D2;D3
+*Package Pin 3;6: Anode , Cathode ; Anode,Cathode  
+*                 (D3,D4);(D1,D2)
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAS40XY 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 8E+08
+D1 1 2 BAS40XY
+*
+.MODEL BAS40XY D
++ IS = 8.361E-09
++ N = 1.003
++ BV = 44
++ IBV = 8E-07
++ RS = 5.031
++ CJO = 3.8E-12
++ VJ = 0.1119
++ M = 0.2915
++ FC = 1
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAS416
+*
+*NXP Semiconductors
+*
+*Low-leakage diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp =  ms
+*trr  = 3?s
+*
+*Package: SOD323
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS416 D
++ IS=805.84E-18
++ N=1.0246
++ RS=50.000E-3
++ IKF=362.16E-6
++ CJO=1.9002E-12
++ M=.35193
++ VJ=1.2722
++ ISR=298.95E-15
++ BV=98
++ IBV=1.42E-3
++ TT=1.0230E-6
+.ENDS
+**
+******************************************
+*
+*BAS45A
+*
+*NXP Semiconductors
+*
+*Low leakage diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 125V
+*IFRM = 625mA @ tp =  ms
+*trr  = 1,5?s
+*
+*Package: SOD523
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS45A D
++ IS=7.0000E-9
++ N=2.2707
++ RS=1.0000E-3
++ IKF=22.121
++ CJO=2.9332E-12
++ M=.24677
++ VJ=.3905
++ ISR=10.010E-21
++ NR=4.9950
++ BV=225.36
++ IBV=10
++ TT=1.7500E-6
+.ENDS
+**
+******************************************
+*
+*BAS516
+*
+*NXP Semiconductors
+*
+*High speed diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp =  ms
+*trr  = 4ns
+*
+*Package: SOD523
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS516 D
++ IS=2.9891E-9
++ N=1.9303
++ RS=0.78115
++ IKF=0.085491E-3
++ CJO=383.41E-15
++ M=.1
++ VJ=9.99
++ ISR=6.8038E-9
++ NR=4.9950
++ BV=130.38
++ IBV=10
++ TT=3.0297E-9
+.ENDS
+**
+******************************************
+*
+*BAS521
+*
+*NXP Semiconductors
+*
+*Single high-voltage switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 1A   @ tp =  1ms
+*trr  = 50ns
+*
+*Package: SOD523
+*
+*Package Pin 1: cathode  
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAS521 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.2E+10
+D1 1 2 BAS521
+*
+.MODEL BAS521 D
++ IS = 7.219E-9
++ N = 2
++ BV = 310
++ IBV = 0.0001
++ RS = 0.63
++ CJO = 4.074E-13
++ VJ = 0.6538
++ M = 0.05409
++ FC = 0.5
++ TT = 2.1987E-8
++ EG = 0.69
++ XTI = 2
+.ENDS
+*
+******************************************
+*
+*BAS521
+*
+*NXP Semiconductors
+*
+*High speed double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 60V
+*IFRM = 600mA @ tp =  1ms
+*trr  = 6ns
+*
+*Package: SOT143B
+*
+*Package Pin 1: cathode  D1
+*Package Pin 2: cathode  D2
+*Package Pin 3: anode    D2
+*Package Pin 4: anode    D1
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAS56 D
++ IS=10.825E-9
++ N=1.9301
++ RS=.49924
++ IKF=1.4135
++ CJO=994.44E-15
++ M=.10001
++ VJ=.69196
++ ISR=1.0704E-9
++ BV=113.15
++ IBV=15.676E-3
++ TT=5.7708E-9
+.ENDS
+**
+******************************************
+*
+*BAS70-07
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 100mA @ tp = 10ms
+*VF   = 410mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT143B
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: Cathode D2
+*Package Pin 3: Anode   D2
+*Package Pin 4: Anode   D1
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS70-07 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.409E+09
+D1 1 2 BAS70-07
+*
+.MODEL BAS70-07 D
++ IS = 3.22E-09 
++ N = 1.018     
++ BV = 77       
++ IBV = 1.67E-07
++ RS = 20.89    
++ CJO = 1.655E-12
++ VJ = 0.349    
++ M = 0.3583    
++ FC = 0.5      
++ TT = 0
++ EG = 0.69     
++ XTI = 2       
+.ENDS   
+**
+******************************************
+*
+*BAS70-07V
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 100mA @ tp = 10ms
+*VF   = 410mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode ; Anode      D1;D2
+*Package Pin 2;5: not connected
+*Package Pin 3;6: Cathode ; Cathode  D2;D1
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS70-07V 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.409E+09
+D1 1 2 BAS70-07V
+*
+.MODEL BAS70-07V D
++ IS = 3.22E-09 
++ N = 1.018     
++ BV = 77       
++ IBV = 1.67E-07
++ RS = 20.89    
++ CJO = 1.655E-12
++ VJ = 0.349    
++ M = 0.3583    
++ FC = 0.5      
++ TT = 0
++ EG = 0.69     
++ XTI = 2       
+.ENDS   
+**
+******************************************
+*
+*BAS70H
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 100mA @ tp = 10ms
+*VF   = 410mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS70H 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.409E+09
+D1 1 2 BAS70H
+*
+.MODEL BAS70H D
++ IS = 3.22E-09 
++ N = 1.018     
++ BV = 77       
++ IBV = 1.67E-07
++ RS = 20.89    
++ CJO = 1.655E-12
++ VJ = 0.349    
++ M = 0.3583    
++ FC = 0.5      
++ EG = 0.69     
++ XTI = 2       
+.ENDS
+**
+******************************************
+*
+*BAS70L
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 100mA @ tp = 10ms
+*VF   = 410mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD882
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS70L 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.409E+9 
+D1 1 2 BAS70L 
+*
+.MODEL BAS70L D 
++ IS = 3.22E-9 
++ N = 1.018 
++ BV = 77 
++ IBV = 1.67E-7 
++ RS = 20.89 
++ CJO = 1.608E-12 
++ VJ = 0.3891 
++ M = 0.3683 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAS70VV
+*
+*NXP Semiconductors
+*
+*General-purpose Schottky diodes
+*
+*
+*
+*
+*IFSM = 100mA @ tp = 10ms
+*VF   = 410mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode ; Cathode  D1;D3
+*Package Pin 2;5: Anode ; Cathode  D2;D2
+*Package Pin 3;6: Anode ; Cathode  D3;D1
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAS70VV 1 2
+*
+* The resistors do not 
+* reflect physical devices. 
+* Instead they improve modeling
+* in the reverse mode of 
+* operation.
+*
+R1 1 2 1.409E+09
+D1 1 2 BAS70VV
+*
+.MODEL BAS70VV D
++ IS = 3.22E-09
++ N = 1.018
++ BV = 77 
++ IBV = 1.67E-07
++ RS = 20.89 
++ CJO = 1.655E-12
++ VJ = 0.349 
++ M = 0.3583 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAS716
+*
+*NXP Semiconductors
+*
+*Low-leakage diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp =  
+*trr  = 3ns
+*
+*Package: SOD523
+*
+*Package Pin 1: cathode 
+*Package Pin 2: anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BAS716 D
++ IS = 3.519E-15
++ N = 1.093
++ BV = 110
++ IBV = 3E-9
++ RS = 0.7423
++ CJO = 1.817E-12
++ VJ = 0.6508
++ M = 0.3689
++ FC = 0.5
++ TT = 8.656E-7
+.ENDS
+**
+******************************************
+*
+*BAT160A
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 10A   @ tp = 8,3ms
+*VF   = 850mV @ IF = 2A
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT223
+*
+*Package Pin 1: Cathode       D1
+*Package Pin 2: not connected
+*Package Pin 3: Cathode       D2
+*Package Pin 4: Anode         D1;D2
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.SUBCKT BAT160A 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1E+7
+D1 1 2 BAT160A
+*
+.MODEL BAT160A D
++ IS = 5E-7
++ N = 0.9751
++ BV = 66
++ IBV = 0.0004
++ RS = 0.3422
++ CJO = 1.75E-10
++ VJ = 0.3761
++ M = 0.4725
++ FC = 0.5
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT160C
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 10A   @ tp = 8,3ms
+*VF   = 850mV @ IF = 2A
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT223
+*
+*Package Pin 1: Anode         D1
+*Package Pin 2: not connected
+*Package Pin 3: Anode         D2
+*Package Pin 4: Cathode       D1;D2
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT160C 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1E+7
+D1 1 2 BAT160C
+*
+.MODEL BAT160C D
++ IS = 5E-7
++ N = 0.9751
++ BV = 66
++ IBV = 0.0004
++ RS = 0.3422
++ CJO = 1.75E-10
++ VJ = 0.3761
++ M = 0.4725
++ FC = 0.5
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT160S
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 10A   @ tp = 8,3ms
+*VF   = 850mV @ IF = 2A
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT223
+*
+*Package Pin 1: Anode           D1
+*Package Pin 2: not connected
+*Package Pin 3: Cathode         D2
+*Package Pin 4: Cathode;Anode   D1;D2
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT160S 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1E+7
+D1 1 2 BAT160S
+*
+.MODEL BAT160S D
++ IS = 5E-7
++ N = 0.9751
++ BV = 66
++ IBV = 0.0004
++ RS = 0.3422
++ CJO = 1.75E-10
++ VJ = 0.3761
++ M = 0.4725
++ FC = 0.5
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT17
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM =       @ tp = s
+*VF   = 600mV @ IF = 10mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          
+*Package Pin 2: not connected
+*Package Pin 3: Cathode        
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT17 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 6E+07
+D1 1 2 BAT17
+*
+.MODEL BAT17 D 
++ IS = 1.419E-09 
++ N = 1.022 
++ BV = 6 
++ IBV = 2.45E-06 
++ RS = 5.112 
++ CJO = 7.867E-13 
++ VJ = 0.1043 
++ M = 0.1439 
++ FC = 0.5 
++ TT = 0 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT46WH
+*
+*NXP Semiconductors
+*
+*Single Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 2,5A  @ tp = 10ms
+*VF   = 850mV @ IF = 250mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT123F
+*
+*Package Pin 1: Cathode         
+*Package Pin 2: Anode
+*       
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAT46WH 1 2
+*
+*The resistor R1 does not  reflect a 
+*physical device but improves 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 9E+007
+D1 1 2 DIODE
+.MODEL DIODE D
++ IS = 1.703E-007
++ N = 1.06
++ BV = 75
++ IBV = 1.055E-006
++ RS = 1.3
++ CJO = 3.498E-011
++ VJ = 0.4
++ M = 0.5
++ FC = 0.5
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT46WJ
+*
+*NXP Semiconductors
+*
+*Single Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 2,5A  @ tp = 10ms
+*VF   = 850mV @ IF = 250mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD323F
+*
+*Package Pin 1: Cathode         
+*Package Pin 2: Anode
+*       
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAT46WJ 1 2
+*
+*The resistor R1 does not  reflect a 
+*physical device but improves 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 9E+007
+D1 1 2 DIODE
+*
+.MODEL DIODE D
++ IS = 1.703E-007
++ N = 1.06
++ BV = 75
++ IBV = 1.055E-006
++ RS = 1.3
++ CJO = 3.498E-011
++ VJ = 0.4
++ M = 0.5
++ FC = 0.5
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54AW
+*
+*NXP Semiconductors
+*
+*Schottky barrier (double) diodes
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT323
+*
+*Package Pin 1: Cathode     D1    
+*Package Pin 2: Cathode     D2
+*Package Pin 3: Anode;Anode D1;D2   
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54AW 1 2
+*
+*The resistor R1 does not reflect 
+*a physical device. Instead it
+*improves modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 3.6E+07 
+D1 1 2 BAT54AW
+*
+.MODEL BAT54AW D 
++    IS = 2.117E-07 
++    N = 1.016 
++    BV = 36 
++    IBV = 1.196E-06 
++    RS = 2.637 
++    CJO = 1.114E-11 
++    VJ = 0.2013 
++    M = 0.3868 
++    FC = 0 
++    TT = 7E-9 
++    EG = 0.69 
++    XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54CM
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT883
+*
+*Package Pin 1: Anode    D1    
+*Package Pin 2: Anode    D2
+*Package Pin 3: common Cathode   
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54CM 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+07 
+D1 1 2 BAT54CM
+*
+.MODEL BAT54CM D 
++ IS = 2.117E-07 
++ N = 1.016 
++ BV = 36 
++ IBV = 1.196E-06 
++ RS = 2.637 
++ CJO = 1.114E-11 
++ VJ = 0.2013 
++ M = 0.3868 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54CM
+*
+*NXP Semiconductors
+*
+*Two Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 0,85A @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode;Anode                     D1;D3   
+*Package Pin 2;5: Anode;Anode                     D2;D4
+*Package Pin 3;6: common Cathode;common Cathode   
+*                 (D3,D4);(D1,D2)
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54CV 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+7 
+D1 1 2 BAT54CV
+*
+.MODEL BAT54CV D 
++ IS = 2.117E-7 
++ N = 1.016 
++ BV = 36 
++ IBV = 1.196E-6 
++ RS = 2.637 
++ CJO = 1.114E-11 
++ VJ = 0.2013 
++ M = 0.3868 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54CW
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT323
+*
+*Package Pin 1: Anode             D1   
+*Package Pin 2: Anode             D2
+*Package Pin 3: Cathode;Cathode   D1;D2
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54CW 1 2 
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+07 
+D1 1 2 BAT54CW
+*
+.MODEL BAT54CW D 
++    IS = 2.117E-07 
++    N = 1.016 
++    BV = 36 
++    IBV = 1.196E-06 
++    RS = 2.637 
++    CJO = 1.114E-11 
++    VJ = 0.2013 
++    M = 0.3868 
++    FC = 0 
++    TT = 7E-9 
++    EG = 0.69 
++    XTI = 2
+.ENDS 
+**
+******************************************
+*
+*BAT54H
+*
+*NXP Semiconductors
+*
+*Schottky barrier single diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 400mV @ IF = 10mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode            
+*Package Pin 2: Anode            
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54H 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.5E+07
+D1 1 2 BAT54H
+*
+.MODEL BAT54H D 
++ IS = 2.36E-07 
++ N = 1.009 
++ BV = 33 
++ IBV = 0.001 
++ RS = 2.633 
++ CJO = 9.53E-12 
++ VJ = 0.2034 
++ M = 0.3811 
++ FC = 0.6435 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT54J
+*
+*NXP Semiconductors
+*
+*Schottky barrier single diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 320mV @ IF = 1mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD323F
+*
+*Package Pin 1: Cathode            
+*Package Pin 2: Anode            
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54J 1 2
+*
+* The resistor R1 does not reflect
+* a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+D1 1 2 BAT54J
+R1 1 2 3.5E+07 
+* 
+.MODEL BAT54J D 
++ IS = 2.36E-07 
++ N = 1.009 
++ BV = 33 
++ IBV = 0.001 
++ RS = 2.633 
++ CJO = 9.53E-12 
++ VJ = 0.2034 
++ M = 0.3811 
++ FC = 0.6435 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT54L
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD882
+*
+*Package Pin 1: Cathode            
+*Package Pin 2: Anode            
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54L 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+7 
+D1 1 2 BAT54L
+*
+.MODEL BAT54L D 
++ IS = 2.117E-7 
++ N = 1.016 
++ BV = 36 
++ IBV = 1.196E-6 
++ RS = 2.637 
++ CJO = 1.114E-11 
++ VJ = 0.2013 
++ M = 0.3868 
++ FC = 0.5 
++ EG = 0.69 
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54SW
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT323
+*
+*Package Pin 1: Anode           D1   
+*Package Pin 2: Cathode         D2
+*Package Pin 3: Cathode;Anode   D1;D2
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54SW 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+07 
+D1 1 2 BAT54SW 
+*
+.MODEL BAT54SW D 
++    IS = 2.117E-07 
++    N = 1.016 
++    BV = 36 
++    IBV = 1.196E-06 
++    RS = 2.637 
++    CJO = 1.114E-11 
++    VJ = 0.2013 
++    M = 0.3868 
++    FC = 0 
++    TT = 7E-9 
++    EG = 0.69 
++    XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54L
+*
+*NXP Semiconductors
+*
+*Single Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 1A    @ tp = 10ms
+*VF   = 400mV @ IF = 10mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT416
+*
+*Package Pin 1: Anode            
+*Package Pin 2: not connected            
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54T 1 2 
+*
+* The resistor R1 does not reflect
+* a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+D1 1 2 BAT54T
+R1 1 2 3.5E+07 
+* 
+.MODEL BAT54T D 
++ IS = 2.36E-07 
++ N = 1.009 
++ BV = 33 
++ IBV = 0.001 
++ RS = 2.633 
++ CJO = 9.53E-12 
++ VJ = 0.2034 
++ M = 0.3811 
++ FC = 0.6435 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT54L
+*
+*NXP Semiconductors
+*
+*Schottky barrier triple diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode ; Cathode   D1;D3       
+*Package Pin 2;5: Anode ; Cathode   D2;D2    
+*Package Pin 3;6: Anode ; Cathode   D3;D1
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54VV 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BAT54VV 
+R1 1 2 3.5E+07 
+* 
+.MODEL BAT54VV D 
++ IS = 2.36E-07 
++ N = 1.009 
++ BV = 33 
++ IBV = 0.001 
++ RS = 2.633 
++ CJO = 9.53E-12 
++ VJ = 0.2034 
++ M = 0.3811 
++ FC = 0.6435 
++ TT = 0 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT54W
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diodes
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT323
+*
+*Package Pin 1: Anode            
+*Package Pin 2: not connected
+*Package Pin 3: Cathode
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54W 1 2 
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.6E+07 
+D1 1 2 BAT54W  
+*
+.MODEL BAT54W D 
++    IS = 2.117E-07 
++    N = 1.016 
++    BV = 36 
++    IBV = 1.196E-06 
++    RS = 2.637 
++    CJO = 1.114E-11 
++    VJ = 0.2013 
++    M = 0.3868 
++    FC = 0 
++    TT = 7E-9 
++    EG = 0.69 
++    XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT54XY
+*
+*NXP Semiconductors
+*
+*Schottky barrier quadruple diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 400mV @ IF = 10mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode ; Anode               D1;D4        
+*Package Pin 2;5: Cathode ; Cathode           D2;D3
+*Package Pin 3;6: Anode/Cathode ; Cathode/Anode  
+*                 D3/D4;D1/D2
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT54XY 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 4.795E+7
+D1 1 2 BAT54XY
+*
+.MODEL BAT54XY D
++ IS = 2.019E-007
++ N = 1.003
++ BV = 33
++ IBV = 1.5E-006
++ RS = 2.759
++ CJO = 7.258E-012
++ VJ = 0.2049
++ M = 0.3577
++ FC = 0.5
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT74V
+*
+*NXP Semiconductors
+*
+*Schottky barrier double diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 500mV @ IF = 30mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Anode ; Anode      D1;D2        
+*Package Pin 2;5: not connected           
+*Package Pin 3;6: Cathode ; Cathode  D2;D1
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT74V 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BAT74V 
+R1 1 2 3.5E+07 
+* 
+.MODEL BAT74V D 
++ IS = 2.36E-07 
++ N = 1.009 
++ BV = 33 
++ IBV = 0.001 
++ RS = 2.633 
++ CJO = 9.53E-12 
++ VJ = 0.2034 
++ M = 0.3811 
++ FC = 0.6435 
++ TT = 0 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT754L
+*
+*NXP Semiconductors
+*
+*Schottky barrier triple diode
+*
+*
+*
+*
+*IFSM = 600mA @ tp = 10ms
+*VF   = 750mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode ; Cathode  D1;D3       
+*Package Pin 2;5: Anode ; Cathode  D2;D2      
+*Package Pin 3;6: Anode ; Cathode  D3;D1
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT754L 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.558E+07
+D1 1 2 BAT754L
+*
+.MODEL BAT754L D
++ IS = 2.993E-07
++ N = 1.01
++ BV = 30
++ IBV = 1.5E-06
++ RS = 2.734
++ CJO = 9.228E-12
++ VJ = 0.3033
++ M = 0.4131
++ FC = 0.5178
++ TT = 0
++ EG = 0.69
++ XTI = 2
+.ENDS
+**
+******************************************
+*
+*BAT85
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 5A    @ tp = 10ms
+*VF   = 800mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOD68
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode      
+*
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT85 1 2
+*
+* The resistor R1 does not reflect
+* a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+D1 1 2 BAT85
+R1 1 2 5.416E+7 
+* 
+.MODEL BAT85 D 
++ IS = 2.076E-7 
++ N = 1.023 
++ BV = 33 
++ IBV = 10E-6 
++ RS = 2.326 
++ CJO = 1.21E-11 
++ VJ = 0.1319 
++ M = 0.2904 
++ EG = 0.69 
++ XTI = 2 
+.ENDS
+**
+******************************************
+*
+*BAT960
+*
+*NXP Semiconductors
+*
+*Schottky barrier diode
+*
+*
+*
+*
+*IFSM = 8A    @ tp = 8,3ms
+*VF   = 350mV @ IF = 100mA
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*Package: SOT666
+*
+*Package Pin 1;4: Cathode ; Anode        
+*Package Pin 2;5: Cathode ; Cathode       
+*Package Pin 3;6: Anode   ; Cathode  
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAT960 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse
+* mode of operation.
+*
+R1 1 2 2E+06
+D1 1 2 BAT960
+*
+.MODEL BAT960 D 
++ IS = 1.686E-06
++ N = 1.015
++ BV = 21
++ IBV = 1E-06
++ RS = 0.1249
++ CJO = 9.086E-11
++ VJ = 0.1939
++ M = 0.4542
++ FC = 1
++ TT = 0
++ EG = 0.69
++ XTI = 2 
+.ENDS*
+******************************************
+*
+*BAV103
+*
+*NXP Semiconductors
+*
+*Single general-purpose switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp =  
+*trr  = 50ns
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAV103 D
++ IS=21.910E-9
++ N=2.2330
++ RS=1.0000E-3
++ IKF=19.230E-3
++ CJO=1.0300E-12
++ M=.1001
++ VJ=.75
++ ISR=10.010E-21
++ BV=293.10
++ IBV=1.2930E-3
++ TT=51.940E-9
+.ENDS
+**
+******************************************
+*
+*BAV199
+*
+*NXP Semiconductors
+*
+*Low-leakage double diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 85V
+*IFRM = 500mA @ tp = 1s
+*trr  = 3?s
+*
+*Package: SOT23
+*
+*Package Pin 1: anode 
+*Package Pin 2: Cathode 
+*Package Pin 3: Anode/Cathode 
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BAV199 D
++ IS=805.84E-18
++ N=1.0246
++ RS=50.000E-3
++ IKF=362.16E-6
++ CJO=1.9002E-12
++ M=.35193
++ VJ=1.2722
++ ISR=298.95E-15
++ BV=113.30
++ IBV=10
++ TT=1.0230E-6
+.ENDS
+**
+******************************************
+*
+*BAV23A_DG
+*
+*NXP Semiconductors
+*
+*Dual high-voltage switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 10ms
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: cathode 
+*Package Pin 3: common anode  
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV23A_DG 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAV23A_DG 
+*
+.MODEL BAV23A_DG D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 6.99E-13 
++ VJ = 0.2028 
++ M = 0.1151 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAV23C_DG
+*
+*NXP Semiconductors
+*
+*Dual high-voltage switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 10ms
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          D1 
+*Package Pin 2: Anode          D2
+*Package Pin 3: common Cathode  
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV23C_DG 1 2  
+*
+* The resistors R1&R2 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAV23C_DG  
+*
+.MODEL BAV23C_DG D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 6.99E-13 
++ VJ = 0.2028 
++ M = 0.1151 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAV23
+*
+*NXP Semiconductors
+*
+*Dual high-voltage switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 10ms
+*trr  = 50ns
+*
+*Package: SOT143B
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: cathode D2
+*Package Pin 3: anode   D2
+*Package Pin 4: Anode   D1
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV23 1 2
+*
+* The resistor R1 does not reflect a
+* physical devices.  Instead it improves
+* modeling in the reverse mode of
+* operation.
+*
+R1 1 2  1.622E+10 
+D1 1 2  BAV23
+*
+.MODEL BAV23 D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 7.528E-13 
++ VJ = 0.1936 
++ M = 0.1285 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAV23S
+*
+*NXP Semiconductors
+*
+*Dual high-voltage switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 250V
+*IFRM = 625mA @ tp = 10ms
+*trr  = 50ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          D1 
+*Package Pin 2: Cathode        D2
+*Package Pin 3: Cathode/Anode  D1/D2
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV23S 1 2 
+*
+* The resistor R1 does not reflect a
+* physical devices.  Instead it improves
+* modeling in the reverse mode of
+* operation.
+*
+R1 1 2 1.622E+10 
+D1 1 2 BAV23S
+*
+.MODEL BAV23S D 
++ IS = 3.648E-9 
++ N = 1.909 
++ BV = 260 
++ IBV = 2E-7 
++ RS = 0.7535 
++ CJO = 7.501E-13 
++ VJ = 0.1995 
++ M = 0.115 
++ FC = 0.5 
++ TT = 3.462E-8 
+.ENDS
+**
+******************************************
+*
+*BAV70M
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT883
+*
+*Package Pin 1: Anode          D1 
+*Package Pin 2: Anode          D2
+*Package Pin 3: common Cathode 
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV70M 1 2 
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 6.9E+9 
+D1 1 2 BAV70M
+*
+.MODEL BAV70M D 
++ IS = 3.678E-9 
++ N = 1.88 
++ BV = 110 
++ IBV = 0.0001 
++ RS = 0.78 
++ CJO = 6.662E-13 
++ VJ = 0.4974 
++ M = 0.1536 
++ FC = 0.5 
++ TT = 3.246E-9 
+.ENDS
+**
+******************************************
+*
+*BAV70
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 450mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          D1 
+*Package Pin 2: Anode          D2
+*Package Pin 3: common Cathode 
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAV70  1 2 
+* 
+* The resistor R1 and the diode D2 do not reflect 
+* physical devices.  Instead they
+* improve modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 5E+009   
+D1 1 2 BAV70
+*
+.MODEL BAV70 D 
+ + IS = 3.2E-009 
+ + N = 1.85      
+ + BV = 125.9    
+ + IBV = 2.906E-007      
+ + RS = 1.1      
+ + CJO = 4.957E-013      
+ + VJ = 0.54     
+ + M = 0.03      
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-013   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS
+**
+******************************************
+*
+*BAV70S
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 450mA @ tp =  
+*trr  = 4ns
+*
+*Package: SOT363
+*
+*Package Pin 1;6: Anode;Cathode  D1;D1,D2
+*Package Pin 2;5: Anode;Anode    D2;D3
+*Package Pin 3;4: Cathode; Anode D3,D4;D4
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAV70S 1 2       
+ R1 1 2 5E+009   
+ D1 1 2  
+ + DIODE1
+ D2 1 2  
+ + DIODE2
+
+*The resistor R1 and the diode 
+*D2 do not reflect physical 
+*devices but improve only 
+*modeling in the reverse mode 
+*of operation.
+*
+
+.MODEL DIODE1 D 
+ + IS = 3.2E-009 
+ + N = 1.85      
+ + BV = 133.4    
+ + IBV = 1.416E-008      
+ + RS = 1.1      
+ + CJO = 4.357E-013      
+ + VJ = 0.05     
+ + M = 0.024     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-013   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS*
+******************************************
+*
+*BAV74
+*
+*NXP Semiconductors
+*
+*High-speed double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 60V
+*IFRM = 450mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          D1 
+*Package Pin 2: Anode          D2
+*Package Pin 3: Cathode 
+*
+*
+*
+*Simulator: 
+*
+******************************************
+*
+.SUBCKT BAV74  1 2 
+*  
+*The resistor R1 and the diode D2 do not  reflect *physical devices but improve only modeling in the *reverse mode of operation.
+*   
+R1 1 2 5E+009   
+D1 1 2 BAV74
+*
+.MODEL BAV74 D 
+ + IS = 3.2E-009 
+ + N = 1.85      
+ + BV = 125.9    
+ + IBV = 2.906E-007      
+ + RS = 1.1      
+ + CJO = 4.957E-013      
+ + VJ = 0.54     
+ + M = 0.03      
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-013   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS
+**
+******************************************
+*
+*BAV99
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA 
+*trr  = 4ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Anode          D1
+*Package Pin 2: Cathode        D2
+*Package Pin 3: Cathode; Anode D1; D2 
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAV99 1 2       
+ R1 1 2 5E+009   
+ D1 1 2  
+ + DIODE1
+ D2 1 2  
+ + DIODE2
+
+*The resistor R1 and the diode 
+*D2 do not reflect physical 
+*devices but improve only 
+*modeling in the reverse mode 
+*of operation.
+*
+
+.MODEL DIODE1 D 
+ + IS = 3.2E-009 
+ + N = 1.85      
+ + BV = 128      
+ + IBV = 9.33E-009       
+ + RS = 1.1      
+ + CJO = 4.667E-013      
+ + VJ = 0.27     
+ + M = 0.0226    
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-013   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS*
+******************************************
+*
+*BAV99S
+*
+*NXP Semiconductors
+*
+*High speed switching diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 100V
+*IFRM = 500mA @ tp =  
+*trr  = 4ns
+*
+*Package: SOT363
+*
+*Package Pin 1;6: Anode; Cathode, Anode  D1;D1,D2
+*Package Pin 2;5: Cathode; Cathode            D2;D3
+*Package Pin 3;4: Anode,Cathode; Anode   D3,D4;D4
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAV99S 1 2       
+ R1 1 2 5E+009   
+ D1 1 2  
+ + DIODE1
+ D2 1 2  
+ + DIODE2
+
+*The resistor R1 and the diode 
+*D2 do not reflect physical 
+*devices but improve only 
+*modeling in the reverse mode 
+*of operation.
+*
+
+.MODEL DIODE1 D 
+ + IS = 3.2E-009 
+ + N = 1.85      
+ + BV = 128      
+ + IBV = 9.33E-009       
+ + RS = 1.1      
+ + CJO = 4.667E-013      
+ + VJ = 0.27     
+ + M = 0.0226    
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3E-013   
+ + N = 1.1       
+ + RS = 280      
+ .ENDS*
+******************************************
+*
+*BAW101
+*
+*NXP Semiconductors
+*
+*High voltage double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 625mA @ tp = 
+*trr  = 50ns
+*
+*Package: SOT143B
+*
+*Package Pin 1: Cathode  D1 
+*Package Pin 2: Cathode  D2
+*Package Pin 3: Anode    D2
+*Package Pin 4: Anode    D1
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAW101 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.2E+10 
+D1 1 2 BAW101
+*
+.MODEL BAW101 D 
++ IS = 7.219E-9 
++ N = 2 
++ BV = 310 
++ IBV = 0.0001 
++ RS = 0.63 
++ CJO = 4.584E-13 
++ VJ = 0.7483 
++ M = 0.06257 
++ FC = 0.5
++ TT = 2.1987E-8
+.ENDS
+**
+******************************************
+*
+*BAW101S
+*
+*NXP Semiconductors
+*
+*High voltage double diode
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 300V
+*IFRM = 625mA @ tp = 
+*trr  = 50ns
+*
+*Package: SOT363
+*
+*Package Pin 1;4: Anode;Anode     D1;D2
+*Package Pin 2;5: not connected
+*Package Pin 3;6: Cathode;Cathode D2;D2  
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAW101S 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.2E+10 
+D1 1 2 BAW101S
+*
+.MODEL BAW101S D 
++ IS = 7.219E-9 
++ N = 2 
++ BV = 310 
++ IBV = 0.0001 
++ RS = 0.63 
++ CJO = 4.584E-13 
++ VJ = 0.7483 
++ M = 0.06257 
++ FC = 0.5
++ TT = 2.1987E-8
+.ENDS
+**
+******************************************
+*
+*BAW56M
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 90V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT883
+*
+*Package Pin 1: Cathode      D1 
+*Package Pin 2: Cathode      D2
+*Package Pin 3: common Anode 
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BAW56M 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 3.001E+9 
+D1 1 2 BAW56M
+*
+.MODEL BAW56M D 
++ IS = 1.001E-9 
++ N = 1.67 
++ BV = 99 
++ IBV = 2.5E-6 
++ RS = 1.21 
++ CJO = 1.745E-12 
++ VJ = 1 
++ M = 0.3065 
++ FC = 0.5 
++ TT = 3.606e-9 
+.ENDS
+**
+******************************************
+*
+*BAW56
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 90V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1 
+*Package Pin 2: Cathode      D2
+*Package Pin 3: common Anode 
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAW56 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 BAW56
+*
+.MODEL BAW56 D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
+.ENDS
+**
+******************************************
+*
+*BAW56S
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 90V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT883
+*
+*Package Pin 1;4: Cathode;Cathode            D1;D3
+*Package Pin 2;5: Cathode;Cathode            D2;D4
+*Package Pin 3;6: common Anode;common Anode  D3/D4;D1/D2   
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAW56S 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 BAW56S
+*
+.MODEL BAW56S D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
++ EG = 1.1
++ XTI = 3
+.ENDS
+**
+******************************************
+*
+*BAW56T
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 90V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT416
+*
+*Package Pin 1: Cathode       D1 
+*Package Pin 2: Cathode       D2
+*Package Pin 3: common Anode   
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAW56T 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 BAW56T
+*
+.MODEL BAW56T D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
++ EG = 1.1
++ XTI = 3
+.ENDS
+**
+******************************************
+*
+*BAW56W
+*
+*NXP Semiconductors
+*
+*High-speed switching diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 90V
+*IFRM = 500mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOT323
+*
+*Package Pin 1: Cathode       D1 
+*Package Pin 2: Cathode       D2
+*Package Pin 3: common Anode   
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAW56W 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 2.3E+9
+D1 1 2 BAW56W
+*
+.MODEL BAW56W D
++ IS = 1.705E-9
++ N = 1.71
++ BV = 87
++ IBV = 0.0003
++ RS = 1.022
++ CJO = 1.798E-12
++ VJ = 1.032
++ M = 0.2987
++ FC = 0.5
++ TT = 3.606E-9 
++ EG = 1.1
++ XTI = 3
+.ENDS
+**
+******************************************
+*
+*BAW62
+*
+*NXP Semiconductors
+*
+*High-speed diode 
+*
+*
+*
+*
+* 
+*
+*
+*
+*
+*
+*
+*VRRM = 75V
+*IFRM = 450mA @ tp = 
+*trr  = 4ns
+*
+*Package: SOD27
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode      
+* 
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BAW62 1 2
+*
+* The Resistor R1 does not reflect 
+* a physical device. Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+R1 1 2 1.15E+10
+D1 1 2 BAW62
+*
+.MODEL BAW62 D
++ IS = 3.126E-9
++ N = 1.925
++ BV = 85
++ IBV = 0.0005
++ RS = 0.8109
++ CJO = 7.27E-13
++ VJ = 0.7226
++ M = 0.01318
++ FC = 0.5
++ TT = 4.04E-9
+.ENDS
+**
+******************************************
+*
+*BZA408B
+*
+*NXP Semiconductors
+*
+*Quadruple bidirectional ESD transient voltage suppressor
+*
+*VCL =      @ IPP  =
+*VBR = 5,5V @ IR   = 100nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Cathode D1;D2
+*Package Pin 2;5: Ground
+*Package Pin 3;6: Cathode;Cathode D3;D4
+*
+*
+*
+*Simulator: SPICE3
+*
+******************************************
+*
+.SUBCKT BZA408B 1 2 
+*
+R1 1 11 2.94E+10
+R2 2 11 2E+10
+D1 11 1 DIODE1
+D2 11 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 1E-14
++ N = 0.05
++ BV = 7.129
++ IBV = 2.518E-6
++ RS = 1
++ CJO = 3.995E-9
++ VJ = 0.01729
++ M = 0.6586
++ FC = 0.5
+.MODEL DIODE2 D
++ IS = 1E-14
++ N = 0.05
++ BV = 7.07
++ IBV = 0.0005811
++ RS = 1
++ CJO = 5.094E-11
++ VJ = 0.9561
++ M = 0.2158
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZA418A
+*
+*NXP Semiconductors
+*
+*Quadruple bidirectional ESD transient voltage suppressor
+*
+*VCL =     @ IPP  =
+*VBR =     @ IR   = 75nA
+*IRM =     @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Cathode D1;D3
+*Package Pin 2;5: Ground
+*Package Pin 3;6: Cathode;Cathode D2;D4
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA418A 1 2
+*
+* The Resistor R1 do not 
+* reflect physical devices. 
+* Instead they improve modeling
+* in the reverse mode of 
+* operation.
+*
+D1 1 2 BZA418A
+R1 1 2 6.5E+08
+*
+.MODEL BZA418A D
++ IS = 2.26E-14
++ N = 1.135
++ BV = 17.9
++ IBV = 1E-09
++ RS = 0.2056
++ CJO = 4.079E-11
++ VJ = 0.5582
++ M = 0.381
++ FC = 0.5
++ TT = 7.502E-07
+.ENDS
+**
+******************************************
+*
+*BZA420A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =     @ IPP  =
+*VBR = 15V @ IR   = 100nA
+*IRM =     @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Cathode D1;D3
+*Package Pin 2;5: common
+*Package Pin 3;6: Cathode;Cathode D2;D4
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA420A 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BZA420A 
+R1 1 2 2.331E+10  
+*
+.MODEL BZA420A D 
++ IS = 2.26E-14 
++ N = 1.092 
++ BV = 20 
++ IBV = 0.001
++ RS = 1.666 
++ CJO = 3.54E-11 
++ VJ = 0.1 
++ M = 0.2858 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA456A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 2?A
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Cathode D1;D3
+*Package Pin 2;5: common
+*Package Pin 3;6: Cathode;Cathode D2;D4
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA456A 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BZA456A  
+R1 1 2 7.98E+9 
+*
+.MODEL BZA456A D 
++ IS = 9.173E-16 
++ N = 1.005 
++ BV = 5.6 
++ IBV = 0.001 
++ RS = 0.2215 
++ CJO = 2.056E-10 
++ VJ = 0.7312 
++ M = 0.3349 
+.ENDS
+**
+******************************************
+*
+*BZA462A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+* 
+*VCL =    @ IPP  =
+*VBR = 4V @ IR   = 700nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT457
+*
+*Package Pin 1;4: Cathode;Cathode D1;D3
+*Package Pin 2;5: common
+*Package Pin 3;6: Cathode;Cathode D2;D4
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA462A 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BZA462A  
+R1 1 2 1.355E+10 
+*
+.MODEL BZA462A D 
++ IS = 4.767E-16 
++ N = 0.9725 
++ BV = 6.2 
++ IBV = 0.001 
++ RS = 0.2 
++ CJO = 1.748E-10 
++ VJ = 0.7312 
++ M = 0.3349 
+.ENDS
+**
+******************************************
+*
+*BZA820A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =     @ IPP  =
+*VBR = 15V @ IR   = 100nA
+*IRM =     @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PPICE
+*
+******************************************
+*
+.MODEL BZA820A D
++ IS=323.81E-18
++ N=.97963
++ RS=.24264
++ IKF=6.9002
++ CJO=37.279E-12
++ M=.32559
++ VJ=.3905
++ ISR=2.7811E-9
++ NR=2.4186
++ BV=19.919
++ IBV=6.0752
++ TT=656.43E-9
+.ENDS
+**
+******************************************
+*
+*BZA856AL
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 1000nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA856AL 1 2
+*
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BZA856AL
+R1 1 2 500MEG
+*
+.MODEL BZA856AL D 
++ IS = 3.92E-16 
++ N = 0.9772 
++ BV = 5.6 
++ IBV = 0.001 
++ RS = 0.7379 
++ CJO = 1.102E-10 
++ VJ = 0.7025 
++ M = 0.3242 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA856A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 2000nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA856A D
++ IS=323.83E-18
++ N=.97963
++ RS=.24251
++ IKF=6.4502
++ CJO=156.61E-12
++ M=.28517
++ VJ=.98457
++ ISR=9.2948E-9
++ NR=2.4186
++ BV=5.7918
++ IBV=.18506
++ TT=116.14E-9
+.ENDS
+**
+******************************************
+*
+*BZA856AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 200nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA856AVL D
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 5.6 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 2.136E-11 
++ VJ = 0.7025 
++ M = 0.3242 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA862AL
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 4V @ IR   = 500nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA862AL 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2  BZA862AL
+R1 1 2 500MEG
+*
+.MODEL BZA862AL D 
++ IS = 1.592E-16 
++ N = 0.9508 
++ BV = 6.2 
++ IBV = 0.001 
++ RS = 0.8922 
++ CJO = 9.341E-11 
++ VJ = 0.7025 
++ M = 0.3242 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA862A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 4V @ IR   = 700nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA862A D
++ IS=323.81E-18
++ N=.97963
++ RS=.24264
++ IKF=6.9002
++ CJO=140.64E-12
++ M=.29103
++ VJ=.92059
++ ISR=41.933E-9
++ NR=2.4186
++ BV=6.3692
++ IBV=.86917
++ TT=123.35E-9
+.ENDS
+**
+******************************************
+*
+*BZA862AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 4V @ IR   = 100nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA862AVL D
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 6.2 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 1.815E-11 
++ VJ = 0.7121 
++ M = 0.3251 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA868AL
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+* 
+*VCL =      @ IPP  =
+*VBR = 4,3V @ IR   = 100nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZA868AL 1 2
+* 
+* The resistor R1 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 BZA868AL
+R1 1 2 500MEG
+*
+.MODEL BZA868AL D 
++ IS = 9.312E-016 
++ N = 1.094 
++ BV = 6.8 
++ IBV = 0.001 
++ RS = 0.1476 
++ CJO = 8.243E-011 
++ VJ = 0.7025 
++ M = 0.3242 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA868A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =      @ IPP  =
+*VBR = 4,3V @ IR   = 200nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA868A D
++ IS=323.81E-18
++ N=.97963
++ RS=.24264
++ IKF=6.9002
++ CJO=125.11E-12
++ M=.34068
++ VJ=1.2066
++ ISR=894.24E-12
++ NR=2.4186
++ BV=7.0126
++ IBV=2.4043
++ TT=115.42E-9
+.ENDS
+**
+******************************************
+*
+*BZA868AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =      @ IPP  =
+*VBR = 4,3V @ IR   = 20nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA868AVL D 
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 6.8 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 1.641E-11 
++ VJ = 0.8979 
++ M = 0.33 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA956A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 1000nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA956A D
++ IS=274.79E-18
++ N=.99151
++ RS=.33553
++ IKF=8.8795
++ CJO=107.97E-12
++ M=.32308
++ VJ=.68909
++ ISR=1.1924E-6
++ NR=4.9950
++ BV=5.7434
++ IBV=.25951
++ TT=865.62E-9
+.ENDS
+**
+******************************************
+*
+*BZA956AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 3V @ IR   = 200nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT353
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA956AVL D
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 5.6 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 2.136E-11 
++ VJ = 0.7025 
++ M = 0.3242 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA962A
+*
+*NXP Semiconductors
+*
+*Quadruple ESD transient voltage suppressor
+*
+*VCL =    @ Ipp  = 
+*VBR = 4V @ IR   = 500nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT665
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA962A D
++ IS=322.57E-18
++ N=.9961
++ RS=.31568
++ IKF=7.9489
++ CJO=89.986E-12
++ M=.33327
++ VJ=.75415
++ ISR=55.253E-9
++ NR=3.2011
++ BV=6.4066
++ IBV=2.9783
++ TT=865.62E-9
+.ENDS
+**
+******************************************
+*
+*BZA962AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =    @ IPP  =
+*VBR = 4V @ IR   = 100nA
+*IRM =    @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT665
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA962AVL D
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 6.2 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 1.815E-11 
++ VJ = 0.7121 
++ M = 0.3251 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZA968A
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =      @ IPP  =
+*VBR = 4,3V @ IR   = 100nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT665
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZA968A D
++ IS=329.56E-18
++ N=.99805
++ RS=.3112
++ IKF=6.1249
++ CJO=77.958E-12
++ M=.34229
++ VJ=.77441
++ ISR=8.8151E-9
++ NR=4.9950
++ BV=7.0369
++ IBV=9.6192
++ TT=865.62E-9
+.ENDS
+**
+******************************************
+*
+*BZA968AVL
+*
+*NXP Semiconductors
+*
+*Quadruple low capacitance ESD suppressor
+*
+*VCL =      @ IPP  =
+*VBR = 4,3V @ IR   = 20nA
+*IRM =      @ VRWM =
+*
+*
+*
+*
+*
+*
+*
+* 
+*
+*
+*
+*Package: SOT665
+*
+*Package Pin 1: Cathode D1
+*Package Pin 2: common anode
+*Package Pin 3: Cathode D2
+*Package Pin 4: Cathode D3
+*Package Pin 5: Cathode D4
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZA968AVL D 
++ IS = 3.644E-17 
++ N = 0.9717 
++ BV = 6.8 
++ IBV = 0.001 
++ RS = 0.5003 
++ CJO = 1.641E-11 
++ VJ = 0.8979 
++ M = 0.33 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZB100A
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 76V
+*IZSM  = 0,23A  @ tp   = 100?s
+*VZmax = 105V   @ IZ   = 1mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB100A 1 2 
+*
+* The resistors R1&R2 do not reflect 
+* physical devices.  Instead they improve
+* modeling in the reverse mode of
+* operation.
+*
+R1 1 22 5E+011 
+R2 2 22 5E+011 
+D1 22 1 DIODE1 
+D2 22 2 DIODE2 
+*
+.MODEL DIODE1 D 
++ IS = 1E-015 
++ N = 1 
++ BV = 100 
++ IBV = 0.001 
++ RS = 0.1 
++ CJO = 1.13E-011 
++ VJ = 1.616 
++ M = 0.5353 
++ FC = 0.5
+*
+.MODEL DIODE2 D 
++ IS = 1E-014 
++ N = 1 
++ BV = 100 
++ IBV = 0.001 
++ RS = 0.1 
++ CJO = 1.13E-011 
++ VJ = 1.423 
++ M = 0.517 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZB84-B10
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,2?A  @ VR   = 7V
+*IZSM  = 3A     @ tp   = 100?s
+*VZmax = 10,20V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B10 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 10
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 84.638E-12
++ VJ = .87838
++ M = .40269
+.ENDS
+**
+******************************************
+*
+*BZB84-B11
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,1?A  @ VR   = 8V
+*IZSM  = 2,5A   @ tp   = 100?s
+*VZmax = 11,20V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B11 D 
++ IS = 1.429E-14 
++ N = 1.101 
++ BV = 11 
++ IBV = 0.005 
++ RS = 0.3705 
++ CJO = 5.404E-11
++ VJ = 0.5891
++ M = 0.3295
+.ENDS
+**
+******************************************
+*
+*BZB84-B12
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,1?A  @ VR   = 8V
+*IZSM  = 2,5A   @ tp   = 100?s
+*VZmax = 12,20V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B12 D 
++ IS = 1.429E-14 
++ N = 1.101 
++ BV = 12.01
++ IBV = 0.005 
++ RS = 0.3705 
++ CJO = 4.928E-11
++ VJ = 0.575
++ M = 0.3292
+.ENDS
+**
+******************************************
+*
+*BZB84-B13
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,1?A  @ VR   = 8V
+*IZSM  = 2,5A   @ tp   = 100?s
+*VZmax = 13,30V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B13 D 
++ IS = 1.429E-14 
++ N = 1.101 
++ BV = 13.215
++ IBV = 0.005 
++ RS = 0.3705 
++ CJO = 4.392E-11 
++ VJ = 0.5723 
++ M = 0.3274
+.ENDS
+**
+******************************************
+*
+*BZB84-B15
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 10,5V
+*IZSM  = 2,0A   @ tp   = 100?s
+*VZmax = 15,30V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B15 D 
++ IS = 1.429E-14 
++ N = 1.101 
++ BV = 14.68 
++ IBV = 0.005 
++ RS = 0.3705 
++ CJO = 4.023E-11
++ VJ = 0.6144
++ M = 0.3297
+.ENDS
+**
+******************************************
+*
+*BZB84-B16
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 11,2V
+*IZSM  = 1,5A   @ tp   = 100?s
+*VZmax = 16,30V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B16 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 16
++ IBV = 0.005
++ RS = 0.4467
++ CJO = 3.509E-11
++ VJ = 0.6502
++ M = 0.3378
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84B18
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 12,6V
+*IZSM  = 1,5A   @ tp   = 100?s
+*VZmax = 18,40V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B18 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 18
++ IBV = 0.005
++ RS = 0.4467
++ CJO = 3.17E-11
++ VJ = 0.6421
++ M = 0.3327
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B20
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 14V
+*IZSM  = 1,5A   @ tp   = 100?s
+*VZmax = 20,40V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B20 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 20
++ IBV = 0.005
++ RS = 0.4467
++ CJO = 2.915E-11
++ VJ = 0.635
++ M = 0.3362
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B22
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 15,4V
+*IZSM  = 1,25A  @ tp   = 100?s
+*VZmax = 22,40V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B22 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 22
++ IBV = 0.005
++ RS = 0.4467
++ CJO = 2.701E-11
++ VJ = 0.7087
++ M = 0.3557
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B24
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 16,8V
+*IZSM  = 1,25A  @ tp   = 100?s
+*VZmax = 24,50V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B24 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 24
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 2.48E-11
++ VJ = 0.7142
++ M = 0.3513
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B27
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 18,9V
+*IZSM  = 1A     @ tp   = 100?s
+*VZmax = 27,50V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B27 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 27
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 2.233E-11
++ VJ = 0.7107
++ M = 0.3546
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84B2V4
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 50?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 2,45V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B2V4 1 2
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 1.51E-11 
++ N = 1.448 
++ BV = 2.45
++ IBV = 0.005
++ RS = 0.0302 
++ CJO = 3.58E-10 
++ VJ = 0.7442 
++ M = 0.3388 
+.MODEL DIODE2 D
++ IS = 1.15E-9 
++ N = 2.449 
++ RS = 0.05 
+.ENDS
+**
+******************************************
+*
+*BZB84B2V7
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 20?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 2,75V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B2V7 1 2 
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 1.096E-13 
++ N = 1.187 
++ BV = 2.7
++ IBV = 0.005
++ RS = 0.1202 
++ CJO = 3.37E-10 
++ VJ = 0.8164 
++ M = 0.3636 
+.MODEL DIODE2 D
++ IS = 7.5E-10 
++ N = 1.953 
++ RS = 0.3 
+.ENDS
+**
+******************************************
+*
+*BZB84-B30
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 21V
+*IZSM  = 1A     @ tp   = 100?s
+*VZmax = 30,60V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B30 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 30
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 2.17E-011
++ VJ = 0.6718
++ M = 0.3465
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B33
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 23,1V
+*IZSM  = 0,9A   @ tp   = 100?s
+*VZmax = 33,70V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B33 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 33
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 2.019E-11
++ VJ = 0.7645
++ M = 0.3782
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B36
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 25,2V
+*IZSM  = 0,8A   @ tp   = 100?s
+*VZmax = 36,70V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B36 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 36
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.866E-11
++ VJ = 0.7591
++ M = 0.3771
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B39
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 27,3V
+*IZSM  = 0,7A   @ tp   = 100?s
+*VZmax = 39,80V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B39 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 39
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.772E-11
++ VJ = 0.7471
++ M = 0.3751
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84B3V0
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 10?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,06V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B3V0 1 2
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 2.19E-17 
++ N = 0.8771 
++ BV = 3
++ IBV = 0.005
++ RS = 0.3041 
++ CJO = 3.281E-10 
++ VJ = 0.6542 
++ M = 0.3188 
+.MODEL DIODE2 D
++ IS = 4.794E-10 
++ N = 1.869 
++ RS = 1.306 
+.ENDS
+**
+******************************************
+*
+*BZB84B3V3
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 5?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,37V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B3V3 1 2
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 2.19E-17 
++ N = 0.8771 
++ BV = 3
++ IBV = 0.005
++ RS = 0.3041 
++ CJO = 3.281E-10 
++ VJ = 0.6542 
++ M = 0.3188 
+.MODEL DIODE2 D
++ IS = 4.794E-10 
++ N = 1.869 
++ RS = 1.306 
+.ENDS
+**
+******************************************
+*
+*BZB84B3V6
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 5?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,67V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B3V6 1 2
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 1.101E-17 
++ N = 0.8784 
++ BV = 3.6
++ IBV = 0.005
++ RS = 0.1883 
++ CJO = 2.911E-10 
++ VJ = 0.64 
++ M = 0.3251 
+.MODEL DIODE2 D
++ IS = 2.369E-10 
++ N = 1.775 
++ RS = 1.306 
+.ENDS
+**
+******************************************
+*
+*BZB84B3V9
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,98V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B3V9 1 2 
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 3.431E-19 
++ N = 0.7931 
++ BV = 3.9
++ IBV = 0.005
++ RS = 0.4145 
++ CJO = 2.77E-10 
++ VJ = 0.6806 
++ M = 0.3301 
+.MODEL DIODE2 D
++ IS = 1.421E-10 
++ N = 1.705 
++ RS = 0.7031 
+.ENDS
+**
+******************************************
+*
+*BZB84-B43
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 30,1V
+*IZSM  = 0,6A   @ tp   = 100?s
+*VZmax = 43,90V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B43 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 43
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.638E-11
++ VJ = 0.7517
++ M = 0.3762
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B47
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 32,9V
+*IZSM  = 0,5A   @ tp   = 100?s
+*VZmax = 47,90V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B47 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 47
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.707E-11
++ VJ = 0.888
++ M = 0.4248
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84B4V3
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 4,39V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B4V3 1 2
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 9.817E-16 
++ N = 1.002 
++ BV = 4.245
++ IBV = 0.005
++ RS = 0.2203 
++ CJO = 2.767E-10 
++ VJ = 0.8526 
++ M = 0.3775 
+.MODEL DIODE2 D
++ IS = 2.621E-12 
++ N = 2.085 
++ RS = 0.2 
+.ENDS
+**
+******************************************
+*
+*BZB84B4V7
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 2V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 4,79V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZB84-B4V7 1 2 
+* 
+* The diode D2 does not reflect 
+* a physical device.  Instead it
+* improves modeling in the reverse 
+* mode of operation.
+*
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 2.383E-16 
++ N = 0.9282 
++ BV = 4.66
++ IBV = 0.005
++ RS = 0.2568 
++ CJO = 2.548E-10 
++ VJ = 0.8432 
++ M = 0.3702 
+.MODEL DIODE2 D
++ IS = 5.566E-13 
++ N = 1.647 
++ RS = 0.1 
+.ENDS
+**
+******************************************
+*
+*BZB84-B51
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 35,7V
+*IZSM  = 0,4A   @ tp   = 100?s
+*VZmax = 52,00V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B51 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 51
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.602E-11
++ VJ = 0.8454
++ M = 0.4154
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B56
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 39,2V
+*IZSM  = 0,3A   @ tp   = 100?s
+*VZmax = 57,10V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B56 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 56
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.508E-11
++ VJ = 0.8856
++ M = 0.4177
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B5V1
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 2?A   @ VR   = 2V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 5,20V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B5V1 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 5.105
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 129.04E-12
++ VJ = .46589
++ M = .2767
+.ENDS
+**
+******************************************
+*
+*BZB84-B5V6
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 1?A   @ VR   = 2V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 5,71V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B5V6 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 5.615
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 126.73E-12
++ VJ = .66355
++ M = .33169
+.ENDS
+**
+******************************************
+*
+*BZB84-B62
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 43,4V
+*IZSM  = 0,3A   @ tp   = 100?s
+*VZmax = 63,20V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B62 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 62
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.403E-11
++ VJ = 0.8053
++ M = 0.4033
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B68
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 47,6V
+*IZSM  = 0,25A  @ tp   = 100?s
+*VZmax = 69,40V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B68 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 68
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.321E-11
++ VJ = 0.7877
++ M = 0.4021
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B6V2
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 4V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 6,32V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B6V2 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 6.195
++ IBV = 0.005
++ RS = 0.2338
++ CJO=113.90E-12
++ VJ=.70655
++ M=.34012
+.ENDS
+**
+******************************************
+*
+*BZB84-B6V8
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 2?A   @ VR   = 4V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 6,94V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B6V8 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 6.805
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 1.107E-10
++ VJ = 0.7367
++ M = 0.3406
+.ENDS
+**
+******************************************
+*
+*BZB84-B75
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 52,5V
+*IZSM  = 0,20A  @ tp   = 100?s
+*VZmax = 76,50V @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B75 D
++ IS = 5.229E-15
++ N = 1.061
++ BV = 75
++ IBV = 0.002
++ RS = 0.4467
++ CJO = 1.246E-11
++ VJ = 0.822
++ M = 0.4052
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZB84-B7V5
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 1?A   @ VR   = 5V
+*IZSM  = 4A    @ tp   = 100?s
+*VZmax = 7,65V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B7V5 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 7.45
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 128.24E-12
++ VJ = .81245
++ M = .36798
+.ENDS
+**
+******************************************
+*
+*BZB84-B8V2
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,7?A @ VR   = 5V
+*IZSM  = 4A    @ tp   = 100?s
+*VZmax = 8,36V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B8V2 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 8.2
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 108.31E-12
++ VJ = .83652
++ M = .38088
+.ENDS
+**
+******************************************
+*
+*BZB84-B9V1
+*
+*NXP Semiconductors
+*
+*Dual Zener diodes
+*
+*
+*
+*
+* 
+*
+*IR    = 0,5?A @ VR   = 6V
+*IZSM  = 3A    @ tp   = 100?s
+*VZmax = 9,28V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode      D1   
+*Package Pin 2: Cathode      D2 
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZB84-B9V1 D
++ IS = 7.526E-16
++ N = 0.992
++ BV = 9.055
++ IBV = 0.005
++ RS = 0.2338
++ CJO = 81.449E-12
++ VJ = .78547
++ M = .36117
+.ENDS
+**
+******************************************
+*
+*BZT52H-B13
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,01?A @ VR   = 8V
+*IZSM  = 2,5A   @ tp   = 300?s
+*VZmax = 13,3V  @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZT52H-B13 1 2
+* 
+*The resistor R1 and the diode2 do 
+*not reflect physical devices but 
+*improve only modeling in the 
+*reverse mode of operation.
+*       
+R1 1 2 1E+012   
+D1 1 2 BZT52H-B13
+*
+ .MODEL BZT52H-B13 D 
+ + IS = 3E-016   
+ + N = 1.005     
+ + BV = 12.91    
+ + IBV = 1E-009  
+ + RS = 0.4      
+ + CJO = 3.832E-011      
+ + VJ = 0.56     
+ + M = 0.324     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 7E-018   
+ + N = 1.25      
+ + RS = 8
+ .ENDS
+**
+******************************************
+*
+*BZT52H-B16
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 11,2V
+*IZSM  = 1,5A   @ tp   = 300?s
+*VZmax = 16,3V  @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZT52HB16 1 2 
+*
+*The resistor R1 and the diode2 do not 
+*reflect physical devices but improve 
+*only modeling in the reverse mode of operation.
+*      
+R1 1 2 1E+012   
+D1 1 2 BZT52HB16 
+*
+.MODEL BZT52HB16 D 
+ + IS = 4E-016   
+ + N = 1 
+ + BV = 15.46    
+ + IBV = 1E-015  
+ + RS = 0.6      
+ + CJO = 2.983E-011      
+ + VJ = 0.64     
+ + M = 0.33      
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 7E-018   
+ + N = 1.25      
+ + RS = 8
+ .ENDS
+**
+******************************************
+*
+*BZT52H-B5V1
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 2,0?A @ VR   = 2,0V
+*IZSM  = 6,0A  @ tp   = 300?s
+*VZmax = 5,2V  @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZT52H-B5V1 1 2 
+*
+*The resistor R1 and the diode2 do not 
+*reflect physical devices but improve 
+*only modeling in the reverse mode of operation.
+*      
+R1 1 2 3E+010   
+D1 1 2 BZT52H-B5V1 
+*
+.MODEL BZT52H-B5V1 D 
+ + IS = 2.1E-015 
+ + N = 1.065     
+ + BV = 5.18     
+ + IBV = 0.00952 
+ + RS = 0.7      
+ + CJO = 1.2E-010
+ + VJ = 0.74     
+ + M = 0.345     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 7E-016   
+ + N = 1.25      
+ + RS = 8
+ .ENDS*
+******************************************
+*
+*BZT52H-B5V6
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 1,0?A @ VR   = 2,0V
+*IZSM  = 6,0A  @ tp   = 300?s
+*VZmax = 5,71V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZT52H-B5V6 1 2  
+*
+*The resistor R1 and the diode2 do not 
+*reflect physical devices but improve 
+*only modeling in the reverse mode of operation.
+*    
+R1 1 2 2E+011   
+D1 1 2 BZT52H-B5V6 
+*
+.MODEL BZT52H-B5V6 D 
+ + IS = 1E-015   
+ + N = 1.025     
+ + BV = 5.48     
+ + IBV = 0.0008204       
+ + RS = 0.4      
+ + CJO = 1.039E-010      
+ + VJ = 0.78     
+ + M = 0.362     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 7E-018   
+ + N = 1.25      
+ + RS = 8
+ .ENDS
+**
+******************************************
+*
+*BZT52H-B6V2
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3,0?A @ VR   = 4,0V
+*IZSM  = 6,0A  @ tp   = 300?s
+*VZmax = 6,32V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD123F
+*
+*Package Pin 1: Cathode       
+*Package Pin 2: Anode 
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZT52H-B6V2 1 2
+*
+*The resistor R1 and the diode2 do not 
+*reflect physical devices but improve 
+*only modeling in the reverse mode of operation.
+*       
+R1 1 2 4E+011   
+D1 1 2 BZT52H-B6V2
+*
+.MODEL BZT52H-B6V2 D 
+ + IS = 4E-016   
+ + N = 1 
+ + BV = 6.131    
+ + IBV = 0.000116
+ + RS = 0.4      
+ + CJO = 8.62E-011       
+ + VJ = 0.82     
+ + M = 0.375     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 7E-018   
+ + N = 1.25      
+ + RS = 8
+ .ENDS
+**
+******************************************
+*
+*BZV49-C12
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,1?A @ VR   = 8,0V
+*IZSM  = 2,5A  @ tp   = 100?s
+*VZmax = 12,7V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT89
+*
+*Package Pin 1: Anode      
+*Package Pin 2: Cathode
+*Package Pin 3: Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZV49-C12 D
++ IS = 8.717E-14 
++ N = 1.206 
++ BV = 12.2 
++ IBV = 0.005 
++ RS = 0.3799 
++ CJO = 4.921E-11 
++ VJ = 0.5824 
++ M = 0.3249 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZV49-C16
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 11,2V
+*IZSM  = 1,5A   @ tp   = 100?s
+*VZmax = 17,1V  @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT89
+*
+*Package Pin 1: Anode      
+*Package Pin 2: Cathode
+*Package Pin 3: Anode
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZV49-C16 D 
++ IS = 4.581E-14 
++ N = 1.191 
++ BV = 16.3 
++ IBV = 0.005 
++ RS = 0.2887 
++ CJO = 3.538E-11 
++ VJ = 0.6494 
++ M = 0.3291 
++ FC = 0.5 
+.ENDS
+**
+******************************************
+*
+*BZV55-C18
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,5A  @ tp   = 100?s
+*VZmax = 19,1V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode      
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZV55-C18 1 2 
+*
+*The resistor R1 and the diode2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*      
+R1 1 2 1.6E+011 
+D1 1 2 BZV55-C18 
+*
+.MODEL BZV55-C18 D 
+ + IS = 1.65E-012
+ + N = 1.35      
+ + BV = 17.78    
+ + IBV = 1.761E-009      
+ + RS = 0.7      
+ + CJO = 2.395E-011      
+ + VJ = 0.56     
+ + M = 0.326     
+ + FC = 0.5      
+ + TT = 0
+ + EG = 1.1      
+ + XTI = 3       
+ .MODEL DIODE2 D 
+ + IS = 3.2E-012 
+ + N = 1.4       
+ + RS = 8E+005   
+ .ENDS
+**
+******************************************
+*
+*BZV55-C27
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,0A  @ tp   = 100?s
+*VZmax = 28,9V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode      
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZV55-C27 1 2
+*
+*The resistor R1 and the diode D2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 5E+011
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 2E-012
++ N = 1.36
++ BV = 26.61
++ IBV = 5.351E-010
++ RS = 0.5
++ CJO = 1.717E-011
++ VJ = 0.7
++ M = 0.36
++ FC = 0.5
++ TT = 0
++ EG = 1.1
++ XTI = 3
+.MODEL DIODE2 D
++ IS = 2.2E-012
++ N = 1.45
++ RS = 8E+005
+.ENDS*
+******************************************
+*
+*BZV55-C33
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,9A  @ tp   = 100?s
+*VZmax = 35,0V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode      
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZV55-C33 1 2
+*
+*The resistor R1 and the diode D2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 5E+011
+D1 1 2
++ DIODE1
+D2 1 2
++ DIODE2
+.MODEL DIODE1 D
++ IS = 2E-012
++ N = 1.35
++ BV = 32.55
++ IBV = 4.29E-010
++ RS = 0.5
++ CJO = 1.511E-011
++ VJ = 0.7
++ M = 0.365
++ FC = 0.5
++ TT = 0
++ EG = 1.1
++ XTI = 3
+.MODEL DIODE2 D
++ IS = 1.8E-012
++ N = 1.38
++ RS = 8E+005
+.ENDS*
+******************************************
+*
+*BZV55-C43
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,6A  @ tp   = 100?s
+*VZmax = 46,0V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode      
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZV55C43 1 2
+*
+*The resistor R1 and the diode D2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 5E+011
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 2E-012
++ N = 1.35
++ BV = 42.17
++ IBV = 6.51E-010
++ RS = 0.5
++ CJO = 1.661E-011
++ VJ = 0.68
++ M = 0.36
++ FC = 0.5
++ TT = 0
++ EG = 1.1
++ XTI = 3
+.MODEL DIODE2 D
++ IS = 8.6E-013
++ N = 1.25
++ RS = 5E+005
+.ENDS*
+******************************************
+*
+*BZV55-C47
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,5A  @ tp   = 100?s
+*VZmax = 50,0V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD80C
+*
+*Package Pin 1: Cathode      
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZV55-C47 1 2
+*
+*The resistor R1 and the diode D2 do not reflect 
+*physical devices but improve 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 5E+011
+D1 1 2 DIODE1
+D2 1 2 DIODE2
+*
+.MODEL DIODE1 D
++ IS = 8E-013
++ N = 1.3
++ BV = 45.97
++ IBV = 3.477E-010
++ RS = 0.3
++ CJO = 1.682E-011
++ VJ = 0.8
++ M = 0.41
++ FC = 0.5
++ TT = 0
++ EG = 1.1
++ XTI = 3
+.MODEL DIODE2 D
++ IS = 3E-015
++ N = 1.2
++ RS = 250
+.ENDS
+**
+******************************************
+*
+*BZV85-C33
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 23,1V
+*IZSM  = 0,9A   @ tp   = 100?s
+*VZmax = 35V    @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD66
+*
+*Package Pin 1: Cathode   D1   
+*Package Pin 2: Cathode   D2
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZV85-C33 D
++ IS=110.88E-18
++ N=.92657
++ RS=.85899
++ IKF=149.75
++ CJO=16.677E-12
++ M=.34957
++ VJ=.66723
++ ISR=100.00E-12
++ BV=33.134
++ IBV=.37878
++ TT=2.2362E-6
+.ENDS
+**
+******************************************
+*
+*BZV85-C3V6
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 5?A  @ VR   = 1V
+*IZSM  = 6A   @ tp   = 100?s
+*VZmax = 3,8V @ IZ   = 5mA
+*VZSM  =      @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD66
+*
+*Package Pin 1: Cathode   D1   
+*Package Pin 2: Cathode   D2
+*Package Pin 3: common Anode
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZV85-C3V6 D
++ IS=4.2450E-15
++ N=1.0330
++ RS=1.0000E-3
++ IKF=12.280E-3
++ CJO=245.10E-12
++ M=.218
++ VJ=.3905
++ ISR=9.2230E-6
++ NR=4.9950
++ BV=3.4110
++ IBV=52.160E-3
++ TT=5.0000E-9
+.ENDS
+**
+******************************************
+*
+*BZV90-C30
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,05?A @ VR   = 21V
+*IZSM  = 1A     @ tp   = 100?s
+*VZmax = 32V    @ IZ   = 2mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT223
+*
+*Package Pin 1: Anode  
+*Package Pin 2: Cathode  
+*Package Pin 3: Anode
+*Package Pin 4: Cathode
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZV90-C30 D
++ IS=857.99E-18
++ N=.82675
++ RS=.31465
++ IKF=13.858E-6
++ CJO=21.774E-12
++ M=.33323
++ VJ=.68651
++ ISR=43.476E-12
++ NR=2.6052
++ BV=30.139
++ IBV=.43564
++ TT=144.27E-9
+.ENDS
+**
+******************************************
+*
+*BZX100A
+*
+*NXP Semiconductors
+*
+*Single Zener diode
+*
+*
+*
+*
+* 
+*
+*IR    = 0,2?A @ VR   = 76V
+*IZSM  = 0,5A  @ tp   = 100?s
+*VZmax = 105V  @ IZ   = 1mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT223
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.SUBCKT BZX100A 1 2 
+*
+*The resistor R1 does not reflect a
+*physical device but improves 
+*only modeling in the reverse 
+*mode of operation.
+*
+R1 1 2 6.819E+006 
+D1 1 2 BZX100A 
+*
+.MODEL BZX100A D
++ IS = 7.061E-014 
++ N = 1.127 
++ BV = 96.7
++ IBV = 0.001 
++ RS = 0.1116 
++ CJO = 5.923E-011 
++ VJ = 0.5 
++ M = 0.3629 
++ FC = 0.5 
++ TT = 0 
++ EG = 1.1 
++ XTI = 3 
+.ENDS
+**
+******************************************
+*
+*BZX284-B6V2
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 4V
+*IZSM  = 12A   @ tp   = 100?s
+*VZmax = 6,32V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD110
+*
+*Package Pin 1: Anode 
+*Package Pin 2: Cathode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZX284-B6V2 D
++ IS=2.6665E-18
++ N=.82284
++ RS=.51617
++ IKF=11.760E-3
++ CJO=167.78E-12
++ M=.37745
++ VJ=.86869
++ ISR=48.886E-9
++ BV=6.3329
++ IBV=.94329
++ TT=121.76E-9
+.ENDS
+**
+******************************************
+*
+*BZX284-B7V5
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 1?A  @ VR   = 5V
+*IZSM  = 4A   @ tp   = 100?s
+*VZmax = 7,9V @ IZ   = 5mA
+*VZSM  =      @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD110
+*
+*Package Pin 1: Anode 
+*Package Pin 2: Cathode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZX284-C7V5 D
++ IS=110.88E-18
++ N=.92657
++ RS=.85899
++ IKF=149.75
++ CJO=86.021E-12
++ M=.32808
++ VJ=.62493
++ ISR=1.1185E-9
++ BV=7.6329
++ IBV=1.0062
++ TT=2.7411E-6
+.ENDS
+**
+******************************************
+*
+*BZX284-B8V2
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 700nA @ VR   = 5V
+*IZSM  = 4A    @ tp   = 100?s
+*VZmax = 8,7V  @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOT23
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: PSPICE
+*
+******************************************
+*
+.MODEL BZX284-C8V2 D
++ IS=2.6665E-18
++ N=.82284
++ RS=.51617
++ IKF=11.760E-3
++ CJO=75.686E-12
++ M=.32952
++ VJ=.64386
++ ISR=146.71E-12
++ BV=8.3329
++ IBV=.94329
++ TT=2.7700E-6
+.ENDS
+**
+******************************************
+*
+*BZX384-B10
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 200nA @ VR   = 7V
+*IZSM  = 3A    @ tp   = 100?s
+*VZmax = 10,2V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B10 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 10
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 6.004E-11
++ VJ = 0.6305
++ M = 0.3302
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B11
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 100nA @ VR   = 8V
+*IZSM  = 2,5A  @ tp   = 100?s
+*VZmax = 11,2V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B11 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 11
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 5.404E-11
++ VJ = 0.5891
++ M = 0.3295
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B12
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 100nA @ VR   = 8V
+*IZSM  = 2,5A  @ tp   = 100?s
+*VZmax = 12,2V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B12 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 12
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 4.928E-11
++ VJ = 0.575
++ M = 0.3292
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B13
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 100nA @ VR   = 8V
+*IZSM  = 2,5A  @ tp   = 100?s
+*VZmax = 13,3V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B13 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 13
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 4.377E-11
++ VJ = 0.5656
++ M = 0.3289
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B15
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 2A    @ tp   = 100?s
+*VZmax = 15,3V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B15 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 15
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 4.023E-11
++ VJ = 0.6144
++ M = 0.3297
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B16
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,5A  @ tp   = 100?s
+*VZmax = 16,3V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B16 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 16
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 3.509E-11
++ VJ = 0.6502
++ M = 0.3378
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B18
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,5A  @ tp   = 100?s
+*VZmax = 18,4V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B18 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 18
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 3.17E-11
++ VJ = 0.6421
++ M = 0.3327
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B20
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,5A  @ tp   = 100?s
+*VZmax = 20,4V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B20 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 20
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 2.915E-11
++ VJ = 0.635
++ M = 0.3362
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B22
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = ,7V
+*IZSM  = 1,25A @ tp   = 100?s
+*VZmax = 22,4V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B22 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 22
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 2.701E-11
++ VJ = 0.7087
++ M = 0.3557
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B24
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1,25A @ tp   = 100?s
+*VZmax = 24,5V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B24 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 24
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 2.48E-11
++ VJ = 0.7142
++ M = 0.3513
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B27
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1A    @ tp   = 100?s
+*VZmax = 27,5V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B27 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 27
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 2.233E-11
++ VJ = 0.7107
++ M = 0.3546
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B2V4
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 2,45V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B2V4 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 2.4
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.615E-10
++ VJ = 0.5762
++ M = 0.2715
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B2V7
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 20?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 2,75V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B2V7 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 2.7
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.518E-10
++ VJ = 0.6816
++ M = 0.3174
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B30
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 1A    @ tp   = 100?s
+*VZmax = 30,6V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B30 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 30
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 2.17E-011
++ VJ = 0.6718
++ M = 0.3465
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B33
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,9A  @ tp   = 100?s
+*VZmax = 33,7V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B33 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 33
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 2.019E-11
++ VJ = 0.7645
++ M = 0.3782
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B36
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,8A  @ tp   = 100?s
+*VZmax = 36,7V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B36 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 36
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.866E-11
++ VJ = 0.7591
++ M = 0.3771
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B39
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,7A  @ tp   = 100?s
+*VZmax = 39,8V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B39 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 39
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.772E-11
++ VJ = 0.7471
++ M = 0.3751
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B3V0
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 10?A  @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,06V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B3V0 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 3
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.346E-10
++ VJ = 0.6722
++ M = 0.3162
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B3V3
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 5?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,37V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B3V3 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 3.3
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.162E-10
++ VJ = 0.6687
++ M = 0.3164
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B3V6
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 5?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,67V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B3V6 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 3.6
++ IBV = 0.005
++ RS = 0.387
++ CJO = 3.062E-10
++ VJ = 0.6643
++ M = 0.3168
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B3V9
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 3,98V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B3V9 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 3.9
++ IBV = 0.005
++ RS = 0.387
++ CJO = 2.82E-10
++ VJ = 0.6743
++ M = 0.3219
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B43
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,6A  @ tp   = 100?s
+*VZmax = 43,9V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B43 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 43
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.638E-11
++ VJ = 0.7517
++ M = 0.3762
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B47
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,5A  @ tp   = 100?s
+*VZmax = 47,9V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B47 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 47
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.707E-11
++ VJ = 0.888
++ M = 0.4248
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B4V3
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 1V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 4,39V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B4V3 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 4.3
++ IBV = 0.005
++ RS = 0.387
++ CJO = 2.715E-10
++ VJ = 0.7721
++ M = 0.3557
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B4V7
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 2V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 4,79V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B4V7 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 4.7
++ IBV = 0.005
++ RS = 0.387
++ CJO = 2.589E-10
++ VJ = 0.8029
++ M = 0.3636
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B51
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA @ VR   = 0,7V
+*IZSM  = 0,4A @ tp   = 100?s
+*VZmax = 52V  @ IZ   = 2mA
+*VZSM  =      @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B51 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 51
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.602E-11
++ VJ = 0.8454
++ M = 0.4154
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B56
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,3A  @ tp   = 100?s
+*VZmax = 57,1V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B56 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 56
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.508E-11
++ VJ = 0.8856
++ M = 0.4177
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B5V1
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 2?A  @ VR   = 2V
+*IZSM  = 6A   @ tp   = 100?s
+*VZmax = 5,2V @ IZ   = 5mA
+*VZSM  =      @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B5V1 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 5.1
++ IBV = 0.005
++ RS = 0.387
++ CJO = 2.402E-10
++ VJ = 0.7934
++ M = 0.3578
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B5V6
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 1?A   @ VR   = 2V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 5,71V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B5V6 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 5.6
++ IBV = 0.005
++ RS = 0.387
++ CJO = 1.961E-10
++ VJ = 0.9187
++ M = 0.423
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B62
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,3A  @ tp   = 100?s
+*VZmax = 63,2V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B62 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 62
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.403E-11
++ VJ = 0.8053
++ M = 0.4033
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B68
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,25A @ tp   = 100?s
+*VZmax = 69,4V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B68 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 68
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.321E-11
++ VJ = 0.7877
++ M = 0.4021
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B6V2
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 3?A   @ VR   = 4V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 6,32V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B6V2 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 6.2
++ IBV = 0.005
++ RS = 0.387
++ CJO = 1.732E-10
++ VJ = 0.9334
++ M = 0.4321
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B6V8
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 2?A   @ VR   = 4V
+*IZSM  = 6A    @ tp   = 100?s
+*VZmax = 6,94V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B6V8 D
++ IS = 1.033E-15
++ N = 1.001
++ BV = 6.8
++ IBV = 0.005
++ RS = 0.387
++ CJO = 1.519E-10
++ VJ = 0.9041
++ M = 0.4027
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B75
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 50nA  @ VR   = 0,7V
+*IZSM  = 0,2A  @ tp   =100?s
+*VZmax = 76,5V @ IZ   = 2mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B75 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 75
++ IBV = 0.002
++ RS = 0.4798
++ CJO = 1.246E-11
++ VJ = 0.822
++ M = 0.4052
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B7V5
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 1?A   @ VR   = 5V
+*IZSM  = 4A    @ tp   = 100?s
+*VZmax = 7,65V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B7V5 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 7.5
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 8.767E-11
++ VJ = 0.5829
++ M = 0.3299
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B8V2
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 700nA @ VR   = 5V
+*IZSM  = 4A    @ tp   = 100?s
+*VZmax = 8,36V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B8V2 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 8.2
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 7.562E-11
++ VJ = 0.5765
++ M = 0.3298
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX384-B9V1
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 500nA @ VR   = 6V
+*IZSM  = 3A    @ tp   = 100?s
+*VZmax = 9,28V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD323
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX384-B9V1 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 9.1
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 7.316E-11
++ VJ = 0.5667
++ M = 0.3295
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX585-B10
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 200nA @ VR   = 7V
+*IZSM  = 3A    @ tp   = 100?s
+*VZmax = 10,2V @ IZ   = 5mA
+*VZSM  =       @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD523
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX585-B10 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 10
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 6.004E-11
++ VJ = 0.6305
++ M = 0.3302
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
+*BZX585-B11
+*
+*NXP Semiconductors
+*
+*Voltage regulator diode
+*
+*
+*
+*
+* 
+*
+*IR    = 100nA  @ VR   = 8V
+*IZSM  = 2,5A   @ tp   = 100?s
+*VZmax = 11,22V @ IZ   = 5mA
+*VZSM  =        @ IZSM =
+*
+*
+*
+* 
+*
+*Package: SOD523
+*
+*Package Pin 1: Cathode 
+*Package Pin 2: Anode
+*
+*
+*
+*
+*Simulator: SPICE2
+*
+******************************************
+*
+.MODEL BZX585-B11 D
++ IS = 1.13E-14
++ N = 1.103
++ BV = 11
++ IBV = 0.005
++ RS = 0.4798
++ CJO = 5.404E-11
++ VJ = 0.5891
++ M = 0.3295
++ FC = 0.5
+.ENDS
+**
+******************************************
+*
