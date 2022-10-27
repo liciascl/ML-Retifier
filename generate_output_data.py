@@ -46,7 +46,7 @@ class analysis:
 
 		self.RL=0
 		self.CL=0
-		self.df = pd.read_csv('diodes_100.csv')
+		self.df = pd.read_csv('diodes_100K.csv')
 		
 		self.data = { 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'Pout' : [], 'PCE' : [] , 'Temperature' : [], 'Time' : []}
 
