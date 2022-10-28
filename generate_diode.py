@@ -90,10 +90,10 @@ class generate:
 		print("  ##########  SALVANDO NUM CSV ##################    ")
 
 
-		df = pd.DataFrame.from_dict(self.model, orient='index').T.to_csv('diodes_100K.csv', index=True)
+		df = pd.DataFrame.from_dict(self.model, orient='index').T.to_csv('diodes_120.csv', index=True)
 
 		print("         DONE        ")
 if __name__ == '__main__':
 	diode = generate()
-	print(diode.gerenerate_all(2000))
+	print(diode.gerenerate_all(120))
 	

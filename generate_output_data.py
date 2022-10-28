@@ -23,7 +23,7 @@ import scipy.fftpack
 class analysis:
 	def __init__(self):
 
-		self.diode = 0
+		self.diode = None
 		self.frequency = 2.45@u_GHz
 		self.amplitude = 100@u_mV
 
@@ -46,9 +46,9 @@ class analysis:
 
 		self.RL=0
 		self.CL=0
-		self.df = pd.read_csv('diodes_100K.csv')
+		self.df = pd.read_csv('diodes_120.csv')
 		
-		self.data = { 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'Pout' : [], 'PCE' : [] , 'Temperature' : [], 'Time' : []}
+		local_data = { 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'Pout' : [], 'PCE' : [] , 'Temperature' : [], 'Time' : []}
 
 	def choose_diode(self):
 		linhas = len(self.df)
@@ -90,46 +90,49 @@ class analysis:
 		
 	def simulation_transient(self):
 		print("Variando a temperatura")
-
+		local_data = { 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'Pout' : [], 'PCE' : [] , 'Temperature' : [], 'Time' : []}
 		for temperatura in range (-20, 50,5):
 			simulator = self.circuit.simulator(temperature = temperatura, nominal_temperature = 25)		
 			analysis = simulator.transient(step_time=self.source.period/200, end_time=self.source.period*5000)
 			# selecionando os últimos 10 períodos
-			self.data['Vg'] = np.array(analysis['1'][-2000:])
-			self.data['Vo'] = np.array(analysis['3'][-2000:])
-			self.data['Ig'] = np.array(-analysis.Vinput[-2000:])
-			self.data['Time']= np.array(analysis.time[-2000:])
-			self.data['Temperature'] = np.append(self.data['Temperature'],temperatura)
+			local_data['Vg'] = np.array(analysis['1'][-2000:])
+			local_data['Vo'] = np.array(analysis['3'][-2000:])
+			local_data['Ig'] = np.array(-analysis.Vinput[-2000:])
+			local_data['Time']= np.array(analysis.time[-2000:])
+			local_data['Temperature'] = np.append(local_data['Temperature'],temperatura)
 
 			# FFT para extrair impedância
-			Vg_f = scipy.fftpack.fft(self.data['Vg'])
-			Ig_f = scipy.fftpack.fft(self.data['Ig'])
+			Vg_f = scipy.fftpack.fft(local_data['Vg'])
+			Ig_f = scipy.fftpack.fft(local_data['Ig'])
 			Y_f = Vg_f/Ig_f
-			self.data['Zin'] = np.append(self.data['Zin'],Y_f[10])
+			local_data['Zin'] = np.append(local_data['Zin'],Y_f[10])
 
 			# tensão média de saída
-			Vl = np.mean(self.data['Vo'], dtype= np.float32)
-			self.data['Vl'] = np.append(self.data['Vl'], Vl)
+			Vl = np.mean(local_data['Vo'], dtype= np.float32)
+			local_data['Vl'] = np.append(local_data['Vl'], Vl)
 			# potência média de entrada
-			Pin = np.mean(self.data['Vg']*self.data['Ig'], dtype= np.float32)
-			self.data['Pin'] = np.append(self.data['Pin'], Pin)
+			Pin = np.mean(local_data['Vg']*local_data['Ig'], dtype= np.float32)
+			local_data['Pin'] = np.append(local_data['Pin'], Pin)
 			# potência média de saída
 			Pout = float((Vl**2)/self.RL)
-			self.data['Pout'] = np.append(self.data['Pout'], Pout)
+			local_data['Pout'] = np.append(local_data['Pout'], Pout)
 			# eficiência
 			PCE = Pout/Pin
-			self.data['PCE'] = np.append(self.data['PCE'], PCE)
+			local_data['PCE'] = np.append(local_data['PCE'], PCE)
 			#print("Eficiencia em ", PCE)
 	
 		
-		plt.plot(self.data['Temperature'], self.data['PCE'], label = "Eficiência")
+		plt.plot(local_data['Temperature'], local_data['PCE'], label = "Diodo_{}".format(self.diode))
 		plt.title("Eficiência do Diodo em relação a Temperatura")
+		plt.legend()
 		plt.xlabel("Temperatura")
 		plt.ylabel("Eficiencia do circuito")
 		plt.savefig("output_png/diodo_{}.png".format(self.diode))
 		
-		self.generate_csv()
-
+		#self.generate_csv()
+		print("  ##########  SALVANDO NUM CSV ##################    ")
+		df = pd.DataFrame.from_dict(local_data, orient='index').T.to_csv('output_csv/output_parameters_{}.csv'.format(self.diode), index=True)
+	
 
 
 	def generate_csv(self):
