@@ -10,7 +10,7 @@ import numpy as np
 import pandas as pd
 import scipy.fftpack
 
-class brute_force(self):
+class brute_force():
 	def __init__(self):
 		self.temperature = 25
 		self.nominal_temperature = 25
@@ -18,79 +18,52 @@ class brute_force(self):
 		#Parametros do circuito
 
 		self.list_diodes =[]
-        ######### MINIMAL VALUES ###########
-		self.CP_min = 0.05e-12
-		self.LS_min = 0.8e-9
-
-		self.IS_min = 1e-8
-		self.RS_min = 5
-		self.N_min = 1.05
-		self.CJ0_min=0.1e-12
-		self.M_min = 0.3
-		self.VJ_min=0.3
-		self.EG_min=0.69
-		self.IBV_min=0.1e-3
-		self.BV_min=2
-		self.XTI_min=2
-
-		self.RL_min=100
-		self.CL_min=1e-12
-		######### MAX VALUES ###########
-
-		self.CP_max = 0.25e-12
-		self.LS_max = 20e-9
-
-		self.IS_max = 1e-4
-		self.RS_max = 30
-		self.N_max = 1.05
-		self.CJ0_max=0.2e-12
-		self.M_max = 0.5
-		self.VJ_max = 0.65
-		self.EG_max=0.69
-		self.IBV_max=0.1e-3
-		self.BV_max=2
-		self.XTI_max=2
-
-		self.RL_max=50000
-		self.CL_max=100e-12
-
-		############ VALUES ###################
-
-		self.model = { 'CP' : [], 'LS' : [], 'IS' : [] , 'RS' : [] , 'N' : [], 'CJ0' : [], 'M' : [], 'VJ' : [] , 'EG' : [], 'IBV' : [],  'BV' : [], 'XTI' : [], 'RL' : [] , 'CL' : []}
-		
-
+		self.data = { 'Diode' : [], 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'Pout' : [], 'PCE' : [] , 'Temperature' : [], 'Time' : []}
+		self.model = {'Diode' : [], 'CP' : [], 'LS' : [], 'IS' : [] , 'RS' : [] , 'N' : [], 'CJ0' : [], 'M' : [], 'VJ' : [] , 'EG' : [], 'IBV' : [],  'BV' : [], 'XTI' : [], 'RL' : [] , 'CL' : []}
 	def parameters(self):
 		
-		self.model['CP'].append(random.uniform(self.CP_min ,  self.CP_max))
-		self.model['LS'].append(random.uniform(self.LS_min ,  self.LS_max))
+		self.CP = (np.random.uniform(0.05e-12 ,  0.25e-12))
+		self.LS = (np.random.uniform(0.8e-9 ,  20e-9))
 
-		self.model['IS'].append(random.uniform(self.IS_min ,  self.IS_max))
-		self.model['RS'].append(random.uniform(self.RS_min ,  self.RS_max))
-		self.model['N'].append(random.uniform(self.N_min ,  self.N_max))
-		self.model['CJ0'].append(random.uniform(self.CJ0_min ,  self.CJ0_max))
-		self.model['M'].append(random.uniform(self.M_min ,  self.M_max))
-		self.model['VJ'].append(random.uniform(self.VJ_min ,  self.VJ_max))
-		self.model['EG'].append(random.uniform(self.EG_min ,  self.EG_max))
-		self.model['IBV'].append(random.uniform(self.IBV_min ,  self.IBV_max))
-		self.model['BV'].append(random.uniform(self.BV_min ,  self.BV_max))
-		self.model['XTI'].append(random.uniform(self.XTI_min ,  self.XTI_max))
+		self.IS = (np.random.uniform(1e-8 ,  1e-4))
+		self.RS = (np.random.uniform( 5 ,  30))
+		self.N = (np.random.uniform(1.05 ,   1.05))
+		self.CJ0 = (np.random.uniform(0.1e-12,  0.2e-12))
+		self.M = (np.random.uniform(0.3 , 0.5))
+		self.VJ = (np.random.uniform(0.3 ,  0.65))
+		self.EG = (np.random.uniform(0.69 ,  0.69))
+		self.IBV = (np.random.uniform(0.1e-3 ,  0.1e-3))
+		self.BV = (np.random.uniform(2 ,  2))
+		self.XTI = (np.random.uniform(2 ,  2))
 
-		self.model['RL'].append(random.uniform(self.RL_min ,  self.RL_max))
-		self.model['CL'].append(random.uniform(self.CL_min ,  self.CL_max))
+		self.RL = (np.random.uniform(100,  50000))
+		self.CL = (np.random.uniform(1e-12 , 100e-12))
 
-
-		return self.model
+		self.model['CP'].append(self.CP)
+		self.model['LS'].append(self.LS)
+		self.model['IS'].append(self.IS)
+		self.model['RS'].append(self.RS)
+		self.model['N'].append(self.N)
+		self.model['CJ0'].append(self.CJ0)
+		self.model['M'].append(self.M)
+		self.model['VJ'].append(self.VJ)
+		self.model['EG'].append(self.EG)
+		self.model['IBV'].append(self.IBV)
+		self.model['BV'].append(self.BV)
+		self.model['XTI'].append(self.XTI)
+		self.model['RL'].append(self.RL)
+		self.model['CL'].append(self.CL)
 		
-		
-		
+				
 	def gerenerate(self, value):
 		print("Gerando dados ...")
 		for diode in range(0,value):
-			model = self.parameters()
+			self.parameters()
 			self.diode = diode
+			self.model['Diode'].append(self.diode)
 			self.circuit_build()
 			print(self.simulation())
-			
+			self.target_result()
 			
 	def circuit_build(self):
 		self.circuit = Circuit("Diode {} Rectifier".format(self.diode))
@@ -101,7 +74,7 @@ class brute_force(self):
 		self.circuit.C('p',2,3,self.CP)
 		self.circuit.R('load',3,self.circuit.gnd,self.RL)
 		self.circuit.C('load',3,self.circuit.gnd,self.CL)
-		self.source = self.circuit.SinusoidalVoltageSource('input', 1, self.circuit.gnd, amplitude=self.amplitude, frequency=self.frequency)	
+		self.source = self.circuit.SinusoidalVoltageSource('input', 1, self.circuit.gnd, amplitude=100@u_mV, frequency=2.45@u_GHz)	
 		print("Netlist: \n\n", self.circuit)
 		
 		return self.circuit
@@ -139,6 +112,24 @@ class brute_force(self):
 			print("Eficiencia em ", PCE)
 			
 		return self.data
+		
+		
+	def target_result(self):
+		df = pd.DataFrame.from_dict(self.data, orient='index')
+		for dado in self.data['PCE']:
+			if dado >= 0.5:
+				plt.plot(self.data['Temperature'], self.data['PCE'], label = "Eficiência")
+				plt.title("Eficiência do Diodo em relação a Temperatura")
+				plt.xlabel("Temperatura")
+				plt.ylabel("Eficiencia do circuito")
+				plt.savefig("output_png/diodo_{}.png".format(self.diode))
+		
+		
+		new_data = {'Input_data' : self.model[self.diode:], 'Output_data' : self.data['Temperature':'PCE']} 
+		print(new_data)
+		#df.to_csv('output_csv/output_parameters_{}.csv'.format(self.diode), index=True)
+				
+		
 if __name__ == '__main__':
 	diode = brute_force()
 	print(diode.gerenerate(2))		
