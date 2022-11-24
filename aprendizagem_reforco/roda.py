@@ -42,24 +42,21 @@ class State:
 				
 			if self.eficiency > 0.85:
 				print("Hora de avaliar o modelo e plotar os resultados")
-				
+				self.evaluate_model()
 			else:
-				print("Resistencia em {} eficiência em {}".format(self.counter_simulation, self.RL, self.eficiency))
-				print("Hora de avaliar se vamos premiar ou descontar o agente")
-				if self.eficiency <= self.eficiency_:
-					self.RL = self.predict_new_parameter()
-					
-				else:
-					self.RL = self.choose_parameters() #pega um valor randomico
-					
-				print("Eficiencia em ", self.run_simulation())
+				print("Resistencia em {} eficiência em {}".format(self.RL, self.eficiency))
+				print("Predizendo novos valores ")
+				self.RL = self.predict_new_parameter()
+				print("Valor previsto em {}".format(self.RL))
+				print("Nova Eficiencia em ", self.run_simulation())
 				print("Saldo atual", self.rewards())
 			
 			self.counter_simulation = self.counter_simulation + 1
 	
 	def predict_new_parameter(self):
-		self.RL_now, self.eficinecy_ = agent.choose_action(self.RL)
+		self.RL_now = agent.choose_action(self.RL)
 		agent.remember(self.RL, action, self.reward, self.RL_now, self.counter_simulation, self.eficiency)
+		print("Aprendendo com os erros do passado")
 		agent.learn()
 
 		
@@ -68,19 +65,7 @@ class State:
 	def choose_parameters(self):
 		# Escolhendo o valor da resistência aleatoriamente
 		self.RL_now = random.uniform(100, 50000)
-		if self.RL_now > self.RL:
-			self.RL = self.RL_now
-			self.state = 1 #Indica que o agente escolheu aumentar a resistência do circuito
-		if self.RL_now == self.RL:
-			self.RL = self.RL_now
-			self.state = 0 #indica que o agente escolheu manter o valor da resistencia
-			
-		if self.RL_now < self.RL:
-			self.RL = self.RL_now
-			self.state = -1 #indica que o agente escolheu diminuit o valor da resistencia
-			
-					 
-			
+	
 		return self.RL
 			
 		
@@ -124,7 +109,7 @@ class State:
 			# eficiência
 			PCE = Pout/Pin
 			local_data['PCE'] = np.append(local_data['PCE'], PCE)
-			print("Eficiencia em {} a {} graus".format(PCE,temperatura))
+			#print("Eficiencia em {} a {} graus".format(PCE,temperatura))
 
 		self.eficiency=local_data['PCE'].mean()		
 		print("Eficiencia media",self.eficiency)
@@ -136,26 +121,44 @@ class State:
 	def rewards(self):
 	
 		if self.eficiency <= 0.1:
-			self.reward = self.reward -10
-		
+			self.score -=10
+			
 		if self.eficiency > 0.1 and self.eficiency <= 0.5:
-			self.reward = self.reward +1
+			self.score +=1
 			
 		if self.eficiency > 0.5 and self.eficiency <= 0.8:
-			self.reward = self.reward +2
+			self.score +=2
 			
 		if self.eficiency > 0.8:
-			self.reward = self.reward +10
+			self.score += 10
 			
 		
-		return self.reward
+		return self.score
+
+	def evaluate_model(self):
+		if i % 10 == 0 and i > 0:
+		    agent.save_model()
+
+		filename = 'Deep_q_learning.png'
+
+		x = [i+1 for i in range(self.n_simulation)]
+		plt.plot(x, self.scores)
+		plt.savefig(filename)
+		#plt.show()
 	
 
+
+
+
+
+
 if __name__ == "__main__":
-	teste = main(2)
+	teste = State(5)
 	teste.run()
 	
-	
+	lr = 0.0005
+	agent = Agent(gamma=0.99, epsilon=0.0, alpha=lr, input_dims=1,
+		  n_actions=3, mem_size=3000000, batch_size=64, epsilon_end=0.0)	
 	
 	
 	
