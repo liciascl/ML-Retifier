@@ -16,39 +16,71 @@ import numpy as np
 import pandas as pd
 import scipy.fftpack
 
-class main:
+from collections import deque
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import Adam
+from deep_agent import Agent
+
+
+
+class State:
 	def __init__(self,n_simulation):
 		self.n_simulation=n_simulation
 		self.counter_simulation = 1
-		self.reward = 0
+		self.score = 0
 		self.eficiency = 0.1
-		
-		
+		self.state = 1
+		self.RL_now = np.random.uniform(100, 50000)
+		self.RL = np.random.uniform(100, 50000)
 	def run(self):
 		print("Vamos rodar {} simulações".format(self.n_simulation))
-	
+		print("Escolhendo os parametros, RL em ", self.choose_parameters())
+		print("Rodando a simulação numero {}".format(self.counter_simulation))
+		print("Eficiencia em ", self.run_simulation())
 		while(self.n_simulation >= self.counter_simulation):
-			
-			
-			print("Escolhendo os parametros, RL em ", self.choose_parameters())
-			print("Rodando a simulação numero {}".format(self.counter_simulation))
-			print("Eficiencia em ", self.run_simulation())
-			
-		
+				
 			if self.eficiency > 0.85:
 				print("Hora de avaliar o modelo e plotar os resultados")
 				
 			else:
 				print("Resistencia em {} eficiência em {}".format(self.counter_simulation, self.RL, self.eficiency))
 				print("Hora de avaliar se vamos premiar ou descontar o agente")
+				if self.eficiency <= self.eficiency_:
+					self.RL = self.predict_new_parameter()
+					
+				else:
+					self.RL = self.choose_parameters() #pega um valor randomico
+					
+				print("Eficiencia em ", self.run_simulation())
 				print("Saldo atual", self.rewards())
 			
 			self.counter_simulation = self.counter_simulation + 1
 	
-	
+	def predict_new_parameter(self):
+		self.RL_now, self.eficinecy_ = agent.choose_action(self.RL)
+		agent.remember(self.RL, action, self.reward, self.RL_now, self.counter_simulation, self.eficiency)
+		agent.learn()
+
+		
+		return self.RL_now
+
 	def choose_parameters(self):
 		# Escolhendo o valor da resistência aleatoriamente
-		self.RL = random.uniform(100, 50000)
+		self.RL_now = random.uniform(100, 50000)
+		if self.RL_now > self.RL:
+			self.RL = self.RL_now
+			self.state = 1 #Indica que o agente escolheu aumentar a resistência do circuito
+		if self.RL_now == self.RL:
+			self.RL = self.RL_now
+			self.state = 0 #indica que o agente escolheu manter o valor da resistencia
+			
+		if self.RL_now < self.RL:
+			self.RL = self.RL_now
+			self.state = -1 #indica que o agente escolheu diminuit o valor da resistencia
+			
+					 
+			
 		return self.RL
 			
 		
