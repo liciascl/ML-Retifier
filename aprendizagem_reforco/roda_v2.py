@@ -118,14 +118,14 @@ class State:
 			sess.run(tf.initialize_all_variables()) # initialize tf variables
 
 			for i in range(max_episodes):
-				self.RL_now = tf.convert_to_tensor(self.RL_now)
+				self.RL_now = tf.convert_to_tensor(self.RL_now, dtype=tf.float32)
 				self.RL_now, pred_Q = sess.run([self.RL_now, self.a2],feed_dict={self.a0:np.eye(16)[self.score:self.score+1]})
+				print(self.RL_now,pred_Q)
 				# if explorating, then taking a random action instead
 				random_action = random.uniform(100, 50000)
-				if random_action<exploration_rate:
-					self.RL_now = random_action
-					print("Pegou um valor randomico") 
-
+			
+				self.RL_now =pred_Q[0][0]
+				self.RL = self.RL_now
 				print("Valor de RL ", self.RL)
 				print("Valor previsto em ", self.RL)
 				print("Nova Eficiencia em ", self.run_simulation())
@@ -133,10 +133,11 @@ class State:
 
 
 				# update
+				update_Q = pred_Q
 				update_Q = self.score + discount*np.max(1/self.eficiency)
 
-				#sess.run([self.update_model],
-						 #feed_dict={self.a0:np.identity(16)[self.score:self.score+1],self.y:update_Q})
+#				sess.run([self.update_model],
+#						 feed_dict={self.a0:np.identity(16)[self.score:self.score+1],self.y:update_Q})
 
 
 
@@ -223,30 +224,7 @@ class State:
 
 
 if __name__ == "__main__":
-	teste = State(5)
+	teste = State(3000)#rodando 3K simulacoes
 	teste.run()
 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+

@@ -1,0 +1,27 @@
+[1;32m2022-11-25 23:17:19,109[0m - [1;34mtensorflow.new_func[0m - [1;31mWARNING[0m - From /home/manutencao/.local/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+Entrou no dnn
+saiu do dnn
+Vamos rodar 3000 simulações
+Resistencia em 47432.89531762012 eficiência em 0.1
+Pegando novo parametro 
+Modo treinamento ativado
+[1;32m2022-11-25 23:17:19,176[0m - [1;34mtensorflow.new_func[0m - [1;31mWARNING[0m - From /home/manutencao/.local/lib/python3.10/site-packages/tensorflow/python/util/tf_should_use.py:243: initialize_all_variables (from tensorflow.python.ops.variables) is deprecated and will be removed after 2017-03-02.
+Instructions for updating:
+Use `tf.global_variables_initializer` instead.
+15988.469 [[0.00086969]]
+Valor de RL  0.0008696866
+Valor previsto em  0.0008696866
+Circuito: 
+
+ .title Simulação Com RL valendo 0.0008696865988895297 Ohms
+Ls 1 2 0.8nH
+D1 2 3 Diodo
+Cp 2 3 0.16pF
+Rload 3 0 0.0008696866
+Cload 3 0 100pF
+Vinput 1 0 DC 0V AC 1V SIN(0V 100mV 2.45GHz 0s 0Hz)
+.model Diodo D (BV=2 CJ0=1.4e-13 EG=0.69 IBV=0.0001 IS=5e-06 M=0.4 N=1.05 RS=20 VJ=0.34 XTI=2)
+
+[1;32m2022-11-25 23:17:19,237[0m - [1;34mPySpice.Spice.NgSpice.Shared.NgSpiceShared._init_ngspice[0m - [1;31mWARNING[0m - Unsupported Ngspice version 36
