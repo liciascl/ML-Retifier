@@ -39,7 +39,7 @@ class State:
 		self.exploration_decay = 1.0/20000
 
 		# nn_model parameters
-		self.in_units = 1
+		self.in_units = 16
 		self.out_units = 1
 		self.hidden_units = 1
 
@@ -54,9 +54,9 @@ class State:
 		
 	def run(self):
 		print("Vamos rodar {} simulações".format(self.n_simulation))
-		print("Escolhendo os parametros, RL em ", self.choose_parameters())
-		print("Rodando a simulação numero {}".format(self.counter_simulation))
-		print("Eficiencia em ", self.run_simulation())
+#		print("Escolhendo os parametros, RL em ", self.choose_parameters())
+#		print("Rodando a simulação numero {}".format(self.counter_simulation))
+#		print("Eficiencia em ", self.run_simulation())
 		while(self.n_simulation >= self.counter_simulation):
 				
 			if self.eficiency > 0.85:
@@ -64,22 +64,15 @@ class State:
 				self.evaluate_model()
 			else:
 				print("Resistencia em {} eficiência em {}".format(self.RL, self.eficiency))
-				print("Predizendo novos valores ")
-				self.RL = self.predict_new_parameter()
+				print("Pegando novo parametro ")
+				#self.RL = self.predict_new_parameter()
+				self.train()				
 				print("Valor previsto em {}".format(self.RL))
 				print("Nova Eficiencia em ", self.run_simulation())
 				print("Saldo atual", self.rewards())
 			
 			self.counter_simulation = self.counter_simulation + 1
 	
-	def predict_new_parameter(self):
-		self.RL_now = agent.choose_action(self.RL)
-		agent.remember(self.RL, action, self.reward, self.RL_now, self.counter_simulation, self.eficiency)
-		print("Aprendendo com os erros do passado")
-		agent.learn()
-
-		
-		return self.RL_now
 
 	def choose_parameters(self):
 		# Escolhendo o valor da resistência aleatoriamente
@@ -88,6 +81,7 @@ class State:
 		return self.RL
 			
 	def _nn_model(self):
+		print("Entrou no dnn")	
 		self.a0 = tf.placeholder(tf.float32, shape=[1, self.in_units]) # input layer
 		self.y = tf.placeholder(tf.float32, shape=[1, self.out_units]) # ouput layer
 		
@@ -109,7 +103,7 @@ class State:
 		
 		# upate model
 		self.update_model =  tf.train.GradientDescentOptimizer(learning_rate=0.05).minimize(self.loss)			
-
+		print("saiu do dnn")
 
 	def train(self):
 		# get hyper parameters
@@ -121,9 +115,10 @@ class State:
 		print("Modo treinamento ativado")
 		# start training
 		with tf.Session() as sess:
-			sess.run(tf.global_variables_initializer()) # initialize tf variables
+			sess.run(tf.initialize_all_variables()) # initialize tf variables
+			self.RL_now = tf.convert_to_tensor(self.RL_now)
 			for i in range(max_episodes):
-				self.RL_now, pred_Q = sess.run([self.RL_now, self.a2],feed_dict={self.a0:np.eye(16)[state:state+1]})
+				self.RL_now, pred_Q = sess.run([self.RL_now, self.a2],feed_dict={self.a0:np.eye(16)[self.score:self.score+1]})
 				# if explorating, then taking a random action instead
 				random_action = random.uniform(100, 50000)
 				if random_action<exploration_rate:
@@ -140,7 +135,7 @@ class State:
 				update_Q = self.score + discount*np.max(1/self.eficiency)
 
 				sess.run([self.update_model],
-						 feed_dict={self.a0:np.identity(16)[state:state+1],self.y:update_Q})
+						 feed_dict={self.a0:np.identity(16)[self.score:self.score+1],self.y:update_Q})
 
 		    # save model
 		save_path = self.saver.save(sess, "./nn_model.ckpt")
@@ -151,7 +146,7 @@ class State:
 		# start testing
 		with tf.Session() as sess:
 		    # restore the model
-		    sess.run(tf.global_variables_initializer())
+		    sess.run(tf.initialize_all_variables)
 		    saver=tf.train.import_meta_graph("./nn_model.ckpt.meta") # restore model
 		    saver.restore(sess, tf.train.latest_checkpoint('./'))# restore variables
 	  
