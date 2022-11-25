@@ -116,8 +116,9 @@ class State:
 		# start training
 		with tf.Session() as sess:
 			sess.run(tf.initialize_all_variables()) # initialize tf variables
-			self.RL_now = tf.convert_to_tensor(self.RL_now)
+
 			for i in range(max_episodes):
+				self.RL_now = tf.convert_to_tensor(self.RL_now)
 				self.RL_now, pred_Q = sess.run([self.RL_now, self.a2],feed_dict={self.a0:np.eye(16)[self.score:self.score+1]})
 				# if explorating, then taking a random action instead
 				random_action = random.uniform(100, 50000)
@@ -134,27 +135,11 @@ class State:
 				# update
 				update_Q = self.score + discount*np.max(1/self.eficiency)
 
-				sess.run([self.update_model],
-						 feed_dict={self.a0:np.identity(16)[self.score:self.score+1],self.y:update_Q})
+				#sess.run([self.update_model],
+						 #feed_dict={self.a0:np.identity(16)[self.score:self.score+1],self.y:update_Q})
 
-		    # save model
-		save_path = self.saver.save(sess, "./nn_model.ckpt")
 
-	def predict(self):
-		# get hyper-parameters
-		max_actions = self.max_actions
-		# start testing
-		with tf.Session() as sess:
-		    # restore the model
-		    sess.run(tf.initialize_all_variables)
-		    saver=tf.train.import_meta_graph("./nn_model.ckpt.meta") # restore model
-		    saver.restore(sess, tf.train.latest_checkpoint('./'))# restore variables
-	  
-		   # always take optimal action
-		    self.RL_now, pred_Q = sess.run([self.action, self.a2],feed_dict={self.a0:np.eye(16)[state:state+1]})
-		    # update
 
-		return self.RL_now
 
 		
 	def run_simulation(self):
@@ -224,9 +209,6 @@ class State:
 		return self.score
 
 	def evaluate_model(self):
-		if i % 10 == 0 and i > 0:
-		    agent.save_model()
-
 		filename = 'Deep_q_learning.png'
 
 		x = [i+1 for i in range(self.n_simulation)]
@@ -243,11 +225,7 @@ class State:
 if __name__ == "__main__":
 	teste = State(5)
 	teste.run()
-	
-	lr = 0.0005
-	agent = Agent(gamma=0.99, epsilon=0.0, alpha=lr, input_dims=1,
-		  n_actions=3, mem_size=3000000, batch_size=64, epsilon_end=0.0)	
-	
+
 	
 	
 	
