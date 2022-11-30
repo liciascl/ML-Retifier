@@ -16,12 +16,8 @@ import numpy as np
 import pandas as pd
 import scipy.fftpack
 
-from collections import deque
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.optimizers import Adam
-from deep_agent import Agent
-
+import tensorflow as tf
+from tensorflow import keras
 
 
 class State:
@@ -33,11 +29,29 @@ class State:
 		self.state = 1
 		self.RL_now = np.random.uniform(100, 50000)
 		self.RL = np.random.uniform(100, 50000)
+		
+        # set hyperparameters
+		self.max_episodes = 2
+		self.max_actions = 99
+		self.discount = 0.93
+		self.exploration_rate = 1.0
+		self.exploration_decay = 1.0/20000
+
+		# nn_model parameters
+		self.in_units = 16
+
+		# construct nn model
+		self._nn_model()
+
+		# save nn model
+		self.saver = tf.train.Saver()		
+
+		
+		
+		
 	def run(self):
 		print("Vamos rodar {} simulações".format(self.n_simulation))
-		print("Escolhendo os parametros, RL em ", self.choose_parameters())
-		print("Rodando a simulação numero {}".format(self.counter_simulation))
-		print("Eficiencia em ", self.run_simulation())
+
 		while(self.n_simulation >= self.counter_simulation):
 				
 			if self.eficiency > 0.85:
@@ -45,29 +59,42 @@ class State:
 				self.evaluate_model()
 			else:
 				print("Resistencia em {} eficiência em {}".format(self.RL, self.eficiency))
-				print("Predizendo novos valores ")
-				self.RL = self.predict_new_parameter()
+				print("Pegando novo parametro ")
+				#self.RL = self.choose_parameters(self.RL,self.eficiency)
+				self.train()				
 				print("Valor previsto em {}".format(self.RL))
 				print("Nova Eficiencia em ", self.run_simulation())
 				print("Saldo atual", self.rewards())
 			
 			self.counter_simulation = self.counter_simulation + 1
 	
-	def predict_new_parameter(self):
-		self.RL_now = agent.choose_action(self.RL)
-		agent.remember(self.RL, action, self.reward, self.RL_now, self.counter_simulation, self.eficiency)
-		print("Aprendendo com os erros do passado")
-		agent.learn()
 
-		
-		return self.RL_now
+	def choose_parameters(self, RL_anteiror, Eficiencia_anterior):
+		# Escolhendo o valor da resistência 
+		model_predictions = model.predict(self.RL)
 
-	def choose_parameters(self):
-		# Escolhendo o valor da resistência aleatoriamente
-		self.RL_now = random.uniform(100, 50000)
 	
 		return self.RL
 			
+	def _nn_model(self):
+		print("Entrou no dnn")	
+		# Next, we build a very simple model.
+		model = keras.Sequential([
+			keras.layers.Dense(10, input_shape=(1,), activation='tanh'),
+			keras.layers.Dense(1)
+			])
+
+		optimizer = tf.keras.optimizers.SGD(learning_rate=0.01)
+		model.compile(optimizer=optimizer,
+              loss='mean_squared_error',
+              metrics=['MSE'])
+		model.fit(self.RL, self.eficiency, epochs=1000)
+		
+	def train(self):
+
+
+
+
 		
 	def run_simulation(self):
 		self.circuit = Circuit("Simulação Com RL valendo {} Ohms".format(self.RL))
@@ -136,15 +163,13 @@ class State:
 		return self.score
 
 	def evaluate_model(self):
-		if i % 10 == 0 and i > 0:
-		    agent.save_model()
-
 		filename = 'Deep_q_learning.png'
-
-		x = [i+1 for i in range(self.n_simulation)]
+		plt.plot(x,model_predictions)
+		plt.plot(self.RL,self.eficiency)
+		
 		plt.plot(x, self.scores)
 		plt.savefig(filename)
-		#plt.show()
+		plt.show()
 	
 
 
@@ -153,34 +178,7 @@ class State:
 
 
 if __name__ == "__main__":
-	teste = State(5)
+	teste = State(3000)#rodando 3K simulacoes
 	teste.run()
-	
-	lr = 0.0005
-	agent = Agent(gamma=0.99, epsilon=0.0, alpha=lr, input_dims=1,
-		  n_actions=3, mem_size=3000000, batch_size=64, epsilon_end=0.0)	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
