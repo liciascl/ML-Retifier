@@ -23,7 +23,7 @@ data = { 'Vg' : [], 'Vo' : [], 'Ig' : [] , 'Zin' : [], 'Vl' : [], 'Pin' : [], 'P
 
 
 # Componentes
-RL=10@u_kΩ
+RL=10337.230826262235
 
 circuit.L('s',1,2,0.8@u_nH)
 circuit.Diode('1',2,3,model='Diodo')
@@ -68,10 +68,9 @@ for temperatura in range (ti, tf,5):
 	# plotando os últimos 10 períodos
 print(data['Pout'])
 plt.plot(data['Temperature'], data['PCE'], label = "Eficiência")
-plt.scatter(data['Pout'], data['Pin'])
 plt.title("Eficiência do Diodo em relação a Temperatura")
 plt.legend()
 plt.xlabel("Temperatura")
 plt.ylabel("Eficiencia do circuito")
-	
+plt.savefig("diode_curve.png")	
 plt.show()	

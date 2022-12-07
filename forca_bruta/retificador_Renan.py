@@ -25,7 +25,7 @@ RL=10@u_kΩ
 circuit.L('s',1,2,0.8@u_nH)
 circuit.Diode('1',2,3,model="Diodo")
 circuit.C('p',2,3,0.16@u_pF)
-circuit.R('load',3,circuit.gnd,RL)
+circuit.R('load',3,circuit.gnd,10337.230826262235)
 circuit.C('load',3,circuit.gnd,100@u_pF)
 
 

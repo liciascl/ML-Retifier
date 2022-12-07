@@ -30,7 +30,7 @@ class RandomCircuits(gym.Env):
         self.circuit = None
         self.target = 0.5
         self.steps = 0
-        self.max_steps = 10
+        self.max_steps = 1
         self.num_params = 1
         self.num_q = 0
         self.num_d = 0
@@ -38,7 +38,7 @@ class RandomCircuits(gym.Env):
         self.eficiency = 0
         self.action_space = spaces.Discrete(2)
         # Example for using image as input (channel-first; channel-last also works):
-        self.observation_space = spaces.Box(low=40000, high=50000,
+        self.observation_space = spaces.Box(low=10000, high=50000,
                                             shape=(1,), dtype=np.uint32)
         self.info = dict()
 

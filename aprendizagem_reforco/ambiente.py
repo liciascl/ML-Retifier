@@ -3,6 +3,8 @@ import re
 import datetime
 import numpy as np
 from subprocess import check_output
+import gym
+from gym import spaces
 
 
 
@@ -10,10 +12,10 @@ class Simulador:
     
 	def __init__(self, params):
 		self.params = params
-
 		self.action_space_length = self.params
 		self.observation_space_size = 15     # number of features
-
+		#self.observation_space = spaces.Box(self.observation_space_size,shape=(1,), dtype=np.uint32)
+		#self.action_space = spaces.Discrete(2)
 		self.iteration = 0
 		self.episode = 0
 		self.sequence = ['strash']
